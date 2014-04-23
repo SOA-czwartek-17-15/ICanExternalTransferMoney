@@ -1,0 +1,2 @@
+c:\users\mateusz\documents\visual studio 2012\Projects\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.exe.config
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.exe.config
