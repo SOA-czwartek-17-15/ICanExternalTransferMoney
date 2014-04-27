@@ -5,14 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 
-namespace ICanExternalTransferMoney
+namespace Contracts
 {
+    /*
+    * Przelewy zewnętrzne
+    **/
     [ServiceContract]
     public interface ICanExternalTransferMoney
     {
         [OperationContract]
-        bool ReceiveExternalMoney(Account from, long to, double howMany);
+        Guid ReceiveExternalMoney(Guid from, string to, double howMany);
         [OperationContract]
-        bool SendExternalMoney(long from, Account to, double howMany);
+        Guid SendExternalMoney(string from, Guid to, double howMany);
     }
 }
