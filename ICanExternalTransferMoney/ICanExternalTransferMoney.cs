@@ -14,8 +14,8 @@ namespace Contracts
     public interface ICanExternalTransferMoney
     {
         [OperationContract]
-        Guid ReceiveExternalMoney(Guid from, string to, double howMany);
+        long ReceiveExternalMoney(Guid from, string to, double howMany);
         [OperationContract]
-        Guid SendExternalMoney(string from, Guid to, double howMany);
+        long SendExternalMoney(string from, Guid to, double howMany);
     }
 }
