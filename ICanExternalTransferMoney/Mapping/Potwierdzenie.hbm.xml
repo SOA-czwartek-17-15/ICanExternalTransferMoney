@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="ICanExternalTransferMoney"
+                   namespace="ICanExternalTransferMoney.Domain">
+
+  <class name="Potwierdzenie">
+    <id name="IdPotwierdzenia" />
+    <property name="TypOperacji" />
+    <property name="NrNadawcy" />
+    <property name="NrOdbiorcy" />
+    <property name="Kwota" />
+    <property name="DataOperacji" />
+  </class>
+  
+</hibernate-mapping>

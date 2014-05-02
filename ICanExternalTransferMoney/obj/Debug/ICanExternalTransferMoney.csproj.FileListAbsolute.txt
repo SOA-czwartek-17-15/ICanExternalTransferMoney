@@ -5,3 +5,12 @@ C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransfer
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.csprojResolveAssemblyReference.cache
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.exe
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.pdb
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\Iesi.Collections.pdb
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\Iesi.Collections.xml
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\log4net.xml
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\NHibernate.pdb
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\NHibernate.xml
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\hibernate.cfg.xml
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\Iesi.Collections.dll
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\log4net.dll
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\NHibernate.dll
