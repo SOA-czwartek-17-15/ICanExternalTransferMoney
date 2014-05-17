@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Mapping\log4net.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">

@@ -14,3 +14,6 @@ C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransfer
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\Iesi.Collections.dll
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\log4net.dll
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\NHibernate.dll
+C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.exe.config
+C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.exe
+C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.pdb

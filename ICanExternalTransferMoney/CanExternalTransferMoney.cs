@@ -7,6 +7,7 @@ using Contracts;
 using NHibernate;
 using ICanExternalTransferMoney.Domain;
 using System.ServiceModel;
+using log4net;
 
 namespace ICanExternalTransferMoney
 {

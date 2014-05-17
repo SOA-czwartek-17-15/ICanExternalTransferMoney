@@ -11,6 +11,9 @@ using ICanExternalTransferMoney.Domain;
 using NHibernate.Tool.hbm2ddl;
 using Contracts;
 using System.Timers;
+using log4net;
+using System.IO;
+using log4net.Config;
 
 namespace ICanExternalTransferMoney
 {
@@ -26,11 +29,20 @@ namespace ICanExternalTransferMoney
 
         public Program() 
         {
+            //log4net kod
+
+
+
             //Wyciąganie adresu ServiceRepository z App.config i uzyskanie ServiceRepo
             string serviceRepositoryAddress = ConfigurationManager.AppSettings["serviceRepositoryAddress"];
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
             ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(serviceRepositoryAddress));
             serviceRepo = cf.CreateChannel();
+
+            //---------log----------
+            LogHelper.GetLog().Info("Got App.config adress and servicerepo");
+            //---------log----------
+
 
             //Otwarcie sesji NHibernate
             NHibernate.Cfg.Configuration config = new NHibernate.Cfg.Configuration();
@@ -41,6 +53,10 @@ namespace ICanExternalTransferMoney
             ISession session = factory.OpenSession();
             ITransaction transaction = session.BeginTransaction();
 
+            //---------log----------
+            LogHelper.GetLog().Info("NHibernate is opened");
+            //---------log----------
+
             //Utworzenie Serwisu ICanExternalTransferMoney
             transfer = new CanExternalTransferMoney(session);
             string serviceAdress = ConfigurationManager.AppSettings["serviceAddress"];
@@ -49,12 +65,22 @@ namespace ICanExternalTransferMoney
             sh.AddServiceEndpoint(typeof(Contracts.ICanExternalTransferMoney), bindingOUT, serviceAdress);
             sh.Open();
 
+            //---------log----------
+            LogHelper.GetLog().Info("Service has been made");
+            //---------log----------
+
             //Rejestracja Serwisu w ServiceRepository i odpalenie timera
             serviceRepo.RegisterService("ICanExternalTransferMoney", serviceAdress);
             Timer timer = new Timer();
             timer.Interval = Int16.Parse(ConfigurationManager.AppSettings["aliveSignalDelay"]);
             timer.Elapsed += new ElapsedEventHandler(TimerOnTick);
             timer.Start();
+
+            //---------log----------
+            LogHelper.GetLog().Info("Service has been registered, timer is up");
+            //---------log----------
+
+
 
             //Pewnie pójdzie do usunięcie WriteLine jak będą logi, ReadLine potrzebny
             Console.WriteLine("Service Repo: {0}", serviceRepositoryAddress);
@@ -64,6 +90,11 @@ namespace ICanExternalTransferMoney
             //Zamknięcie sesji nhibernate
             session.Close();
             timer.Stop();
+
+            //---------log----------
+            LogHelper.GetLog().Info("NHibernate is not up anymore");
+            //---------log----------
+
         }
 
         /// <summary>
@@ -94,3 +125,20 @@ namespace ICanExternalTransferMoney
         }
     }
 }
+
+public class LogHelper
+{
+static LogHelper()
+{
+var confFile = ConfigurationSettings.AppSettings.Get("log4net.config");
+var fi = new FileInfo(confFile);
+XmlConfigurator.Configure(fi);
+}
+
+public static ILog GetLog()
+{
+return LogManager.GetLogger("WebAppLog");
+}
+}
+
+
