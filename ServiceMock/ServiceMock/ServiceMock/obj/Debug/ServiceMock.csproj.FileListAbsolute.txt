@@ -1,0 +1,2 @@
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceMock\ServiceMock\bin\Debug\ServiceMock.exe.config
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceMock\ServiceMock\obj\Debug\ServiceMock.csprojResolveAssemblyReference.cache

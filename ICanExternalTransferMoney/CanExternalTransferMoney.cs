@@ -29,38 +29,44 @@ namespace ICanExternalTransferMoney
         {
             if (AccountRepository == null) return Guid.Empty;
             Account toAccount = AccountRepository.GetAccountById(to);
-            AccountRepository.ChangeAccountBalance(to, toAccount.Money + (long) howMany); //nie wiem czemu long jest w interfejsie o.O
             string nrKonta = toAccount.AccountNumber;
+            if (AccountRepository.ChangeAccountBalance(to, toAccount.Money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
+            {
+                //log
+                log.InfoFormat("Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
 
-            //log
-            log.InfoFormat("Otrzymano: {0} od: {1} do: {2}({3})",howMany,from,nrKonta,to);
+                //Dodanie do bazy MySQL potwierdzenia operacji
+                ITransaction transaction = Session.BeginTransaction();
+                Potwierdzenie potwierdzenie = new Potwierdzenie("z zewnątrz", from, nrKonta, howMany);
+                Session.Save(potwierdzenie);
+                transaction.Commit();
 
-            //Dodanie do bazy MySQL potwierdzenia operacji
-            ITransaction transaction = Session.BeginTransaction();
-            Potwierdzenie potwierdzenie = new Potwierdzenie("z zewnątrz", from, nrKonta, howMany);
-            Session.Save(potwierdzenie);
-            transaction.Commit();
-
-            return potwierdzenie.IdPotwierdzenia;
+                return potwierdzenie.IdPotwierdzenia;
+            }
+            log.ErrorFormat("NIE Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
+            return Guid.Empty;
         }
 
         public Guid SendExternalMoney(Guid from, string to, double howMany)
         {
             if (AccountRepository == null) return Guid.Empty;
             Account fromAccount = AccountRepository.GetAccountById(from);
-            AccountRepository.ChangeAccountBalance(from, fromAccount.Money + (long)howMany); //nie wiem czemu long jest w interfejsie o.O
             string nrKonta = fromAccount.AccountNumber;
+            if (AccountRepository.ChangeAccountBalance(from, fromAccount.Money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
+            {
+                //log
+                log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
 
-            //log
-            log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
+                //Dodanie do bazy MySQL potwierdzenia operacji
+                ITransaction transaction = Session.BeginTransaction();
+                Potwierdzenie potwierdzenie = new Potwierdzenie("na zewnątrz", nrKonta, to, howMany);
+                Session.Save(potwierdzenie);
+                transaction.Commit();
 
-            //Dodanie do bazy MySQL potwierdzenia operacji
-            ITransaction transaction = Session.BeginTransaction();
-            Potwierdzenie potwierdzenie = new Potwierdzenie("na zewnątrz", nrKonta, to, howMany);
-            Session.Save(potwierdzenie);
-            transaction.Commit();
-
-            return potwierdzenie.IdPotwierdzenia;
+                return potwierdzenie.IdPotwierdzenia;
+            }
+            log.ErrorFormat("NIE Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
+            return Guid.Empty;
         }
     }
 }
