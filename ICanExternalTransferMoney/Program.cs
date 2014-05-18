@@ -12,8 +12,8 @@ using NHibernate.Tool.hbm2ddl;
 using Contracts;
 using System.Timers;
 using log4net;
-using System.IO;
 using log4net.Config;
+using System.IO;
 
 namespace ICanExternalTransferMoney
 {
@@ -24,15 +24,12 @@ namespace ICanExternalTransferMoney
         private IServiceRepository serviceRepo;
         private CanExternalTransferMoney transfer;
         private string accountRepositoryAddress = null;
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
 
         static void Main(string[] args) { new Program(); }
 
         public Program() 
         {
-            //log4net kod
-
-
-
             //Wyciąganie adresu ServiceRepository z App.config i uzyskanie ServiceRepo
             string serviceRepositoryAddress = ConfigurationManager.AppSettings["serviceRepositoryAddress"];
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
@@ -40,7 +37,7 @@ namespace ICanExternalTransferMoney
             serviceRepo = cf.CreateChannel();
 
             //---------log----------
-            LogHelper.GetLog().Info("Got App.config adress and servicerepo");
+            log.Info("Got App.config adress and servicerepo");
             //---------log----------
 
 
@@ -54,7 +51,7 @@ namespace ICanExternalTransferMoney
             ITransaction transaction = session.BeginTransaction();
 
             //---------log----------
-            LogHelper.GetLog().Info("NHibernate is opened");
+            log.Info("NHibernate is opened");
             //---------log----------
 
             //Utworzenie Serwisu ICanExternalTransferMoney
@@ -66,7 +63,7 @@ namespace ICanExternalTransferMoney
             sh.Open();
 
             //---------log----------
-            LogHelper.GetLog().Info("Service has been made");
+            log.Info("Service has been made");
             //---------log----------
 
             //Rejestracja Serwisu w ServiceRepository i odpalenie timera
@@ -77,7 +74,7 @@ namespace ICanExternalTransferMoney
             timer.Start();
 
             //---------log----------
-            LogHelper.GetLog().Info("Service has been registered, timer is up");
+            log.Info("Service has been registered, timer is up");
             //---------log----------
 
 
@@ -92,7 +89,7 @@ namespace ICanExternalTransferMoney
             timer.Stop();
 
             //---------log----------
-            LogHelper.GetLog().Info("NHibernate is not up anymore");
+            log.Info("NHibernate is not up anymore");
             //---------log----------
 
         }
@@ -105,8 +102,8 @@ namespace ICanExternalTransferMoney
         /// <param name="e"></param>
         private void TimerOnTick(object sender, EventArgs e)
         {
-            serviceRepo.IsAlive("ICanExternalTransferMoney");
-            string address = serviceRepo.GetServiceAddress("IAccountRepository");
+            serviceRepo.Alive("ICanExternalTransferMoney");
+            string address = serviceRepo.GetServiceLocation("IAccountRepository");
             if (address == null || !address.Equals(accountRepositoryAddress)){
                 if (address != null)
                 {
@@ -124,21 +121,6 @@ namespace ICanExternalTransferMoney
             }            
         }
     }
-}
-
-public class LogHelper
-{
-static LogHelper()
-{
-var confFile = ConfigurationSettings.AppSettings.Get("log4net.config");
-var fi = new FileInfo(confFile);
-XmlConfigurator.Configure(fi);
-}
-
-public static ILog GetLog()
-{
-return LogManager.GetLogger("WebAppLog");
-}
 }
 
 

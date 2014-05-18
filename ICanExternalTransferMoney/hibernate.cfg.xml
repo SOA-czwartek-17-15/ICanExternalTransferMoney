@@ -4,6 +4,7 @@
     <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
     <property name="connection.connection_string">
       <!--Dane bazy MySQL-->
+      Server=localhost;Database=soa;User ID=soa;Password=soa;
     </property>
     <property name="dialect">NHibernate.Dialect.MySQLDialect</property>
   </session-factory>

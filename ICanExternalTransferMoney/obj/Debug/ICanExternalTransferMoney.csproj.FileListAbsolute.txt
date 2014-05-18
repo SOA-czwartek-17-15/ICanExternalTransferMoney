@@ -17,3 +17,4 @@ C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransfer
 C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.exe.config
 C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.exe
 C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.pdb
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\log4.config
