@@ -69,7 +69,7 @@ namespace ICanExternalTransferMoney
             //Rejestracja Serwisu w ServiceRepository i odpalenie timera
             serviceRepo.RegisterService("ICanExternalTransferMoney", serviceAdress);
             Timer timer = new Timer();
-            timer.Interval = Int16.Parse(ConfigurationManager.AppSettings["aliveSignalDelay"]);
+            timer.Interval = Double.Parse(ConfigurationManager.AppSettings["aliveSignalDelay"]);
             timer.Elapsed += new ElapsedEventHandler(TimerOnTick);
             timer.Start();
 
@@ -87,6 +87,7 @@ namespace ICanExternalTransferMoney
             //Zamknięcie sesji nhibernate
             session.Close();
             timer.Stop();
+            serviceRepo.Unregister("ICanExternalTransferMoney");
 
             //---------log----------
             log.Info("NHibernate is not up anymore");

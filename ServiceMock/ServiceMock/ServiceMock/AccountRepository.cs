@@ -10,6 +10,14 @@ namespace ServiceMock
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     class AccountRepository : IAccountRepository
     {
+        private Account acc;
+        public AccountRepository()
+        {
+            acc = new Account();
+            acc.Money = 15;
+            acc.AccountNumber = "123456";
+        }
+
         public long CreateAccount(int clientId, Account details)
         {
             return 0;
@@ -17,11 +25,12 @@ namespace ServiceMock
 
         public Account GetAccountInformation(string accountNumber)
         {
-
+            return acc;
         }
 
         public Account GetAccountById(Guid accountId)
         {
+            return acc;
         }
 
         public bool ChangeAccountBalance(Guid accountId, long amount)

@@ -28,6 +28,8 @@ namespace ServiceMock
             NetTcpBinding bindingOUT2 = new NetTcpBinding(SecurityMode.None);
             sh2.AddServiceEndpoint(typeof(Contracts.IServiceRepository), bindingOUT2, serviceAdress2);
             sh2.Open();
+
+            Console.ReadLine();
         }
     }
 }
