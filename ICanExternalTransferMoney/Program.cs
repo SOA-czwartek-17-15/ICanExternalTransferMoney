@@ -26,7 +26,16 @@ namespace ICanExternalTransferMoney
         private string accountRepositoryAddress = null;
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
 
-        static void Main(string[] args) { new Program(); }
+        static void Main(string[] args) 
+        {
+            try{ new Program(); }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                Console.WriteLine(ex.Message);
+                Console.ReadLine();
+            }
+        }
 
         public Program() 
         {
@@ -48,7 +57,6 @@ namespace ICanExternalTransferMoney
             new SchemaExport(config).Execute(false, false, false); //Drugi na true gdy chcemy dropTable robić przy każdym uruchomieniu, false gdy mamy już uworzoną tabele
             ISessionFactory factory = config.BuildSessionFactory();
             ISession session = factory.OpenSession();
-            ITransaction transaction = session.BeginTransaction();
 
             //---------log----------
             log.Info("NHibernate is opened");
