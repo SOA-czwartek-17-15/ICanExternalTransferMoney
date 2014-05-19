@@ -13,7 +13,7 @@ namespace ServiceMock
         /*Zarejestrowanie Serwisu*/
         public void RegisterService(String Name, String Address)
         {
-            Console.WriteLine("REGISTER: {0}({1})\n",Name,Address);
+            Console.WriteLine("REGISTER: {0}({1})",Name,Address);
         }
 
         /*Pobranie adresu Serwisu*/
@@ -34,14 +34,14 @@ namespace ServiceMock
         /*Wyrejestrowanie Serwisu*/
         public void Unregister(String Name)
         {
-            Console.WriteLine("UNREGISTER: {0}\n",Name);
+            Console.WriteLine("UNREGISTER: {0}",Name);
         }
 
         /*Zgłoszenie się, że Serwis nadal działa (po 5s od ostatniego zgłoszenia
          serwis uznany jest za niedziałający i usuwany)*/
         public void Alive(String Name)
         {
-            Console.WriteLine("ALIVE: {0}\n",Name);
+            Console.WriteLine("ALIVE: {0}",Name);
         }
     }
 }

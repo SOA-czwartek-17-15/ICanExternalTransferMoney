@@ -24,12 +24,26 @@ namespace ServiceMock
 
             AccountRepo = new AccountRepository();
             string serviceAdress2 = "net.tcp://localhost:54321/AccountRepo";
-            var sh2 = new ServiceHost(ServiceRepo, new Uri[] { new Uri(serviceAdress) });
+            var sh2 = new ServiceHost(AccountRepo, new Uri[] { new Uri(serviceAdress2) });
             NetTcpBinding bindingOUT2 = new NetTcpBinding(SecurityMode.None);
-            sh2.AddServiceEndpoint(typeof(Contracts.IServiceRepository), bindingOUT2, serviceAdress2);
+            sh2.AddServiceEndpoint(typeof(Contracts.IAccountRepository), bindingOUT2, serviceAdress2);
             sh2.Open();
 
-            Console.ReadLine();
+            string tekst = Console.ReadLine();
+
+            while (tekst.Equals("n"))
+            {
+                Contracts.ICanExternalTransferMoney transfer;
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                ChannelFactory<Contracts.ICanExternalTransferMoney> cf = new ChannelFactory<Contracts.ICanExternalTransferMoney>(binding, new EndpointAddress("net.tcp://localhost:41234/ICanExternalTransferMoney"));
+                transfer = cf.CreateChannel();
+
+                transfer.SendExternalMoney(Guid.NewGuid(), "abc", 12.5);
+                transfer.ReceiveExternalMoney("bcd", Guid.NewGuid() , 32.4);
+
+                tekst = Console.ReadLine();
+            }
+
         }
     }
 }

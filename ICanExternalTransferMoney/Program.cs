@@ -72,6 +72,7 @@ namespace ICanExternalTransferMoney
             timer.Interval = Double.Parse(ConfigurationManager.AppSettings["aliveSignalDelay"]);
             timer.Elapsed += new ElapsedEventHandler(TimerOnTick);
             timer.Start();
+            TimerOnTick(null,null);
 
             //---------log----------
             log.Info("Service has been registered, timer is up");
@@ -113,6 +114,7 @@ namespace ICanExternalTransferMoney
                     ChannelFactory<IAccountRepository> cf = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(accountRepositoryAddress));
                     IAccountRepository accountRepository = cf.CreateChannel();
                     transfer.AccountRepository = accountRepository;
+                    log.InfoFormat("New IAccountRepository address: {0}",address);
                 }
                 else
                 {

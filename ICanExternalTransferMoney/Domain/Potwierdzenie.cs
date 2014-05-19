@@ -12,7 +12,6 @@ namespace ICanExternalTransferMoney.Domain
         public Potwierdzenie(string _TypOperacji, string _NrNadawcy, string _NrOdbiorcy, double _Kwota)
         {
             IdPotwierdzenia = Guid.NewGuid();
-            Console.WriteLine(IdPotwierdzenia);
             TypOperacji = _TypOperacji;
             NrNadawcy = _NrNadawcy;
             NrOdbiorcy = _NrOdbiorcy;
