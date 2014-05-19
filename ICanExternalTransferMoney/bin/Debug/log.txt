@@ -436,3 +436,413 @@ DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0
 2014-05-19 09:49:00,435 [10] DEBUG NHibernate.Impl.SessionImpl [(null)] - closing session
 2014-05-19 09:49:00,436 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - running BatcherImpl.Dispose(true)
 2014-05-19 09:49:00,441 [10] INFO  ICanExternalTransferMoney.Program [(null)] - NHibernate is not up anymore
+2014-05-19 17:10:18,833 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Got App.config adress and servicerepo
+2014-05-19 17:10:19,380 [9] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-05-19 17:10:19,391 [9] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-05-19 17:10:19,392 [9] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-05-19 17:10:19,393 [9] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-05-19 17:10:19,420 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - connection.driver_class=NHibernate.Driver.MySqlDataDriver
+2014-05-19 17:10:19,420 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - connection.connection_string=Server=localhost;Database=soa;User ID=soa;Password=soa;
+2014-05-19 17:10:19,420 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - dialect=NHibernate.Dialect.MySQLDialect
+2014-05-19 17:10:19,421 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
+2014-05-19 17:10:19,422 [9] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-05-19 17:10:19,469 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:10:19,509 [9] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-05-19 17:10:19,532 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: IdPotwierdzenia -> IdPotwierdzenia, type: Guid
+2014-05-19 17:10:19,543 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: TypOperacji -> TypOperacji, type: String
+2014-05-19 17:10:19,543 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: NrNadawcy -> NrNadawcy, type: String
+2014-05-19 17:10:19,543 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: NrOdbiorcy -> NrOdbiorcy, type: String
+2014-05-19 17:10:19,543 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: Kwota -> Kwota, type: Double
+2014-05-19 17:10:19,543 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: DataOperacji -> DataOperacji, type: DateTime
+2014-05-19 17:10:19,550 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:10:19,552 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-05-19 17:10:19,552 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-05-19 17:10:19,552 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-05-19 17:10:19,552 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-05-19 17:10:19,553 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-05-19 17:10:19,564 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-05-19 17:10:19,564 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-05-19 17:10:19,564 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-05-19 17:10:19,564 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-05-19 17:10:19,564 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-05-19 17:10:19,573 [9] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport [(null)] - 
+    drop table if exists Potwierdzenie
+2014-05-19 17:10:19,574 [9] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport [(null)] - 
+    create table Potwierdzenie (
+        IdPotwierdzenia VARCHAR(40) not null,
+       TypOperacji VARCHAR(255),
+       NrNadawcy VARCHAR(255),
+       NrOdbiorcy VARCHAR(255),
+       Kwota DOUBLE,
+       DataOperacji DATETIME,
+       primary key (IdPotwierdzenia)
+    )
+2014-05-19 17:10:19,575 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-05-19 17:10:19,575 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-05-19 17:10:19,575 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-05-19 17:10:19,575 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-05-19 17:10:19,575 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-05-19 17:10:19,584 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:10:19,588 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:10:19,619 [9] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-05-19 17:10:19,620 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-05-19 17:10:19,621 [9] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-05-19 17:10:19,662 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-05-19 17:10:19,697 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-05-19 17:10:19,741 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-05-19 17:10:19,741 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-05-19 17:10:19,741 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-05-19 17:10:19,742 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-05-19 17:10:19,742 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-05-19 17:10:19,742 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-05-19 17:10:19,742 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-05-19 17:10:19,743 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-05-19 17:10:19,744 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-05-19 17:10:19,744 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-05-19 17:10:19,744 [9] DEBUG NHibernate.Cfg.SettingsFactory [(null)] - Wrap result sets: disabled
+2014-05-19 17:10:19,744 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-05-19 17:10:19,745 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-05-19 17:10:19,745 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-05-19 17:10:19,757 [9] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-05-19 17:10:19,758 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Session factory constructed with filter configurations : {}
+2014-05-19 17:10:19,758 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver', 'connection.connection_string'='Server=localhost;Database=soa;User ID=soa;Password=soa;', 'dialect'='NHibernate.Dialect.MySQLDialect'}
+2014-05-19 17:10:19,759 [9] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] - Obtaining IDbConnection from Driver
+2014-05-19 17:10:19,879 [9] DEBUG NHibernate.Connection.ConnectionProvider [(null)] - Closing connection
+2014-05-19 17:10:19,924 [9] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer [(null)] - No custom accessors found for entity: ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:10:19,927 [9] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer [(null)] - No custom accessors found for entity: ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:10:19,942 [9] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer [(null)] - Create Instantiator using optimizer for:ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:10:19,988 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] - Static SQL for entity: ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:10:19,988 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Version select: SELECT IdPotwierdzenia FROM Potwierdzenie WHERE IdPotwierdzenia = ?
+2014-05-19 17:10:19,988 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Snapshot select: SELECT potwierdze_.IdPotwierdzenia, potwierdze_.TypOperacji as TypOpera2_0_, potwierdze_.NrNadawcy as NrNadawcy0_, potwierdze_.NrOdbiorcy as NrOdbiorcy0_, potwierdze_.Kwota as Kwota0_, potwierdze_.DataOperacji as DataOper6_0_ FROM Potwierdzenie potwierdze_ WHERE potwierdze_.IdPotwierdzenia=?
+2014-05-19 17:10:19,988 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Insert 0: INSERT INTO Potwierdzenie (TypOperacji, NrNadawcy, NrOdbiorcy, Kwota, DataOperacji, IdPotwierdzenia) VALUES (?, ?, ?, ?, ?, ?)
+2014-05-19 17:10:19,988 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Update 0: UPDATE Potwierdzenie SET TypOperacji = ?, NrNadawcy = ?, NrOdbiorcy = ?, Kwota = ?, DataOperacji = ? WHERE IdPotwierdzenia = ?
+2014-05-19 17:10:19,988 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Delete 0: DELETE FROM Potwierdzenie WHERE IdPotwierdzenia = ?
+2014-05-19 17:10:20,010 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:10:20,010 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:10:20,010 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=? for update
+2014-05-19 17:10:20,010 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=? for update
+2014-05-19 17:10:20,010 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=? for update
+2014-05-19 17:10:20,011 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:10:20,011 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:10:20,012 [9] DEBUG NHibernate.Impl.SessionFactoryObjectFactory [(null)] - initializing class SessionFactoryObjectFactory
+2014-05-19 17:10:20,012 [9] DEBUG NHibernate.Impl.SessionFactoryObjectFactory [(null)] - registered: 91b58ba3c873429a9249bea5f2a5eca3(unnamed)
+2014-05-19 17:10:20,012 [9] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] - no name configured
+2014-05-19 17:10:20,012 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Instantiated session factory
+2014-05-19 17:10:20,014 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Checking 0 named HQL queries
+2014-05-19 17:10:20,014 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Checking 0 named SQL queries
+2014-05-19 17:10:20,028 [9] DEBUG NHibernate.Impl.SessionImpl [(null)] - [session-id=f9cefd0d-d3de-47e2-b953-575bc828ae28] opened session at timestamp: 635361162200, for session factory: [/91b58ba3c873429a9249bea5f2a5eca3]
+2014-05-19 17:10:20,030 [9] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Begin (Unspecified)
+2014-05-19 17:10:20,031 [9] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] - Obtaining IDbConnection from Driver
+2014-05-19 17:10:20,033 [9] INFO  ICanExternalTransferMoney.Program [(null)] - NHibernate is opened
+2014-05-19 17:10:20,283 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been made
+2014-05-19 17:10:59,663 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Got App.config adress and servicerepo
+2014-05-19 17:11:00,233 [9] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-05-19 17:11:00,245 [9] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-05-19 17:11:00,246 [9] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-05-19 17:11:00,247 [9] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-05-19 17:11:00,276 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - connection.driver_class=NHibernate.Driver.MySqlDataDriver
+2014-05-19 17:11:00,276 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - connection.connection_string=Server=localhost;Database=soa;User ID=soa;Password=soa;
+2014-05-19 17:11:00,276 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - dialect=NHibernate.Dialect.MySQLDialect
+2014-05-19 17:11:00,276 [9] DEBUG NHibernate.Cfg.Configuration [(null)] - properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
+2014-05-19 17:11:00,277 [9] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-05-19 17:11:00,325 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:11:00,368 [9] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-05-19 17:11:00,390 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: IdPotwierdzenia -> IdPotwierdzenia, type: Guid
+2014-05-19 17:11:00,401 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: TypOperacji -> TypOperacji, type: String
+2014-05-19 17:11:00,402 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: NrNadawcy -> NrNadawcy, type: String
+2014-05-19 17:11:00,402 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: NrOdbiorcy -> NrOdbiorcy, type: String
+2014-05-19 17:11:00,402 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: Kwota -> Kwota, type: Double
+2014-05-19 17:11:00,402 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapped property: DataOperacji -> DataOperacji, type: DateTime
+2014-05-19 17:11:00,408 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:11:00,410 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-05-19 17:11:00,410 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-05-19 17:11:00,410 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-05-19 17:11:00,410 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-05-19 17:11:00,411 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-05-19 17:11:00,422 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-05-19 17:11:00,422 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-05-19 17:11:00,422 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-05-19 17:11:00,422 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-05-19 17:11:00,422 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-05-19 17:11:00,430 [9] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport [(null)] - 
+    drop table if exists Potwierdzenie
+2014-05-19 17:11:00,431 [9] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport [(null)] - 
+    create table Potwierdzenie (
+        IdPotwierdzenia VARCHAR(40) not null,
+       TypOperacji VARCHAR(255),
+       NrNadawcy VARCHAR(255),
+       NrOdbiorcy VARCHAR(255),
+       Kwota DOUBLE,
+       DataOperacji DATETIME,
+       primary key (IdPotwierdzenia)
+    )
+2014-05-19 17:11:00,432 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-05-19 17:11:00,432 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-05-19 17:11:00,432 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-05-19 17:11:00,432 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-05-19 17:11:00,432 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-05-19 17:11:00,441 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:11:00,444 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-05-19 17:11:00,476 [9] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-05-19 17:11:00,476 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-05-19 17:11:00,477 [9] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-05-19 17:11:00,519 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-05-19 17:11:00,555 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-05-19 17:11:00,577 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-05-19 17:11:00,578 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-05-19 17:11:00,578 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-05-19 17:11:00,578 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-05-19 17:11:00,578 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-05-19 17:11:00,578 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-05-19 17:11:00,579 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-05-19 17:11:00,579 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-05-19 17:11:00,580 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-05-19 17:11:00,580 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-05-19 17:11:00,580 [9] DEBUG NHibernate.Cfg.SettingsFactory [(null)] - Wrap result sets: disabled
+2014-05-19 17:11:00,581 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-05-19 17:11:00,581 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-05-19 17:11:00,581 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-05-19 17:11:00,594 [9] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-05-19 17:11:00,594 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Session factory constructed with filter configurations : {}
+2014-05-19 17:11:00,594 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver', 'connection.connection_string'='Server=localhost;Database=soa;User ID=soa;Password=soa;', 'dialect'='NHibernate.Dialect.MySQLDialect'}
+2014-05-19 17:11:00,595 [9] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] - Obtaining IDbConnection from Driver
+2014-05-19 17:11:00,696 [9] DEBUG NHibernate.Connection.ConnectionProvider [(null)] - Closing connection
+2014-05-19 17:11:00,742 [9] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer [(null)] - No custom accessors found for entity: ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:11:00,745 [9] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer [(null)] - No custom accessors found for entity: ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:11:00,760 [9] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer [(null)] - Create Instantiator using optimizer for:ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:11:00,806 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] - Static SQL for entity: ICanExternalTransferMoney.Domain.Potwierdzenie
+2014-05-19 17:11:00,806 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Version select: SELECT IdPotwierdzenia FROM Potwierdzenie WHERE IdPotwierdzenia = ?
+2014-05-19 17:11:00,806 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Snapshot select: SELECT potwierdze_.IdPotwierdzenia, potwierdze_.TypOperacji as TypOpera2_0_, potwierdze_.NrNadawcy as NrNadawcy0_, potwierdze_.NrOdbiorcy as NrOdbiorcy0_, potwierdze_.Kwota as Kwota0_, potwierdze_.DataOperacji as DataOper6_0_ FROM Potwierdzenie potwierdze_ WHERE potwierdze_.IdPotwierdzenia=?
+2014-05-19 17:11:00,806 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Insert 0: INSERT INTO Potwierdzenie (TypOperacji, NrNadawcy, NrOdbiorcy, Kwota, DataOperacji, IdPotwierdzenia) VALUES (?, ?, ?, ?, ?, ?)
+2014-05-19 17:11:00,806 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Update 0: UPDATE Potwierdzenie SET TypOperacji = ?, NrNadawcy = ?, NrOdbiorcy = ?, Kwota = ?, DataOperacji = ? WHERE IdPotwierdzenia = ?
+2014-05-19 17:11:00,806 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] -  Delete 0: DELETE FROM Potwierdzenie WHERE IdPotwierdzenia = ?
+2014-05-19 17:11:00,830 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:11:00,830 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:11:00,830 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=? for update
+2014-05-19 17:11:00,830 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=? for update
+2014-05-19 17:11:00,830 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=? for update
+2014-05-19 17:11:00,831 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:11:00,831 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader [(null)] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ICanExternalTransferMoney.Domain.Potwierdzenie: SELECT potwierdze0_.IdPotwierdzenia as IdPotwie1_0_0_, potwierdze0_.TypOperacji as TypOpera2_0_0_, potwierdze0_.NrNadawcy as NrNadawcy0_0_, potwierdze0_.NrOdbiorcy as NrOdbiorcy0_0_, potwierdze0_.Kwota as Kwota0_0_, potwierdze0_.DataOperacji as DataOper6_0_0_ FROM Potwierdzenie potwierdze0_ WHERE potwierdze0_.IdPotwierdzenia=?
+2014-05-19 17:11:00,832 [9] DEBUG NHibernate.Impl.SessionFactoryObjectFactory [(null)] - initializing class SessionFactoryObjectFactory
+2014-05-19 17:11:00,832 [9] DEBUG NHibernate.Impl.SessionFactoryObjectFactory [(null)] - registered: 68856174af1142e2b76a997094e865e7(unnamed)
+2014-05-19 17:11:00,833 [9] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] - no name configured
+2014-05-19 17:11:00,833 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Instantiated session factory
+2014-05-19 17:11:00,835 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Checking 0 named HQL queries
+2014-05-19 17:11:00,835 [9] DEBUG NHibernate.Impl.SessionFactoryImpl [(null)] - Checking 0 named SQL queries
+2014-05-19 17:11:00,848 [9] DEBUG NHibernate.Impl.SessionImpl [(null)] - [session-id=5c0eee31-3ffb-4d25-b7d2-05be8bbce4ef] opened session at timestamp: 635361162608, for session factory: [/68856174af1142e2b76a997094e865e7]
+2014-05-19 17:11:00,851 [9] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Begin (Unspecified)
+2014-05-19 17:11:00,851 [9] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] - Obtaining IDbConnection from Driver
+2014-05-19 17:11:00,853 [9] INFO  ICanExternalTransferMoney.Program [(null)] - NHibernate is opened
+2014-05-19 17:11:01,118 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been made
+2014-05-19 17:11:01,513 [9] INFO  ICanExternalTransferMoney.Program [(null)] - New IAccountRepository address: net.tcp://localhost:54321/AccountRepo
+2014-05-19 17:11:01,513 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered, timer is up
+2014-05-19 17:11:14,267 [10] INFO  ICanExternalTransferMoney.CanExternalTransferMoney [(null)] - Wys³ano: 12.5 do: abc od: (d8727c0a-7cc8-45cf-a251-a346ac53e2cc)
+2014-05-19 17:11:14,271 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener [(null)] - saving transient instance
+2014-05-19 17:11:14,274 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener [(null)] - generated identifier: 3fbf6d4d-cf2a-4cdb-972e-3c662626820b, using strategy: NHibernate.Id.Assigned
+2014-05-19 17:11:14,275 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener [(null)] - saving [ICanExternalTransferMoney.Domain.Potwierdzenie#3fbf6d4d-cf2a-4cdb-972e-3c662626820b]
+2014-05-19 17:11:14,288 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Start Commit
+2014-05-19 17:11:14,289 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - flushing session
+2014-05-19 17:11:14,290 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - processing flush-time cascades
+2014-05-19 17:11:14,291 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - dirty checking collections
+2014-05-19 17:11:14,292 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Flushing entities and processing referenced collections
+2014-05-19 17:11:14,298 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Processing unreferenced collections
+2014-05-19 17:11:14,298 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Scheduling collection removes/(re)creates/updates
+2014-05-19 17:11:14,299 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2014-05-19 17:11:14,299 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2014-05-19 17:11:14,299 [10] DEBUG NHibernate.Impl.Printer [(null)] - listing entities:
+2014-05-19 17:11:14,301 [10] DEBUG NHibernate.Impl.Printer [(null)] - ICanExternalTransferMoney.Domain.Potwierdzenie{'IdPotwierdzenia'='3fbf6d4d-cf2a-4cdb-972e-3c662626820b', 'TypOperacji'='na zewn¹trz', 'NrNadawcy'=null, 'NrOdbiorcy'='abc', 'Kwota'='12,5', 'DataOperacji'='2014-05-19 17:11:14'}
+2014-05-19 17:11:14,301 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - executing flush
+2014-05-19 17:11:14,301 [10] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] - registering flush begin
+2014-05-19 17:11:14,305 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] - Inserting entity: [ICanExternalTransferMoney.Domain.Potwierdzenie#3fbf6d4d-cf2a-4cdb-972e-3c662626820b]
+2014-05-19 17:11:14,311 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - Opened new IDbCommand, open IDbCommands: 1
+2014-05-19 17:11:14,311 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - Building an IDbCommand object for the SqlString: INSERT INTO Potwierdzenie (TypOperacji, NrNadawcy, NrOdbiorcy, Kwota, DataOperacji, IdPotwierdzenia) VALUES (?, ?, ?, ?, ?, ?)
+2014-05-19 17:11:14,311 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] - Dehydrating entity: [ICanExternalTransferMoney.Domain.Potwierdzenie#3fbf6d4d-cf2a-4cdb-972e-3c662626820b]
+2014-05-19 17:11:14,312 [10] DEBUG NHibernate.Type.StringType [(null)] - binding 'na zewn¹trz' to parameter: 0
+2014-05-19 17:11:14,313 [10] DEBUG NHibernate.Type.StringType [(null)] - binding null to parameter: 1
+2014-05-19 17:11:14,313 [10] DEBUG NHibernate.Type.StringType [(null)] - binding 'abc' to parameter: 2
+2014-05-19 17:11:14,313 [10] DEBUG NHibernate.Type.DoubleType [(null)] - binding '12,5' to parameter: 3
+2014-05-19 17:11:14,313 [10] DEBUG NHibernate.Type.DateTimeType [(null)] - binding '2014-05-19 17:11:14' to parameter: 4
+2014-05-19 17:11:14,313 [10] DEBUG NHibernate.Type.GuidType [(null)] - binding '3fbf6d4d-cf2a-4cdb-972e-3c662626820b' to parameter: 5
+2014-05-19 17:11:14,316 [10] DEBUG NHibernate.SQL [(null)] - INSERT INTO Potwierdzenie (TypOperacji, NrNadawcy, NrOdbiorcy, Kwota, DataOperacji, IdPotwierdzenia) VALUES (?p0, ?p1, ?p2, ?p3, ?p4, ?p5);?p0 = 'na zewn¹trz' [Type: String (11)], ?p1 = NULL [Type: String (0)], ?p2 = 'abc' [Type: String (3)], ?p3 = 12,5 [Type: Double (0)], ?p4 = 2014-05-19 17:11:14 [Type: DateTime (0)], ?p5 = 3fbf6d4d-cf2a-4cdb-972e-3c662626820b [Type: Guid (0)]
+2014-05-19 17:11:14,317 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Enlist Command
+2014-05-19 17:11:14,322 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - ExecuteNonQuery took 4 ms
+2014-05-19 17:11:14,324 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - ExecuteBatch for 1 statements took 0 ms
+2014-05-19 17:11:14,325 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - Closed IDbCommand, open IDbCommands: 0
+2014-05-19 17:11:14,326 [10] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] - registering flush end
+2014-05-19 17:11:14,326 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - post flush
+2014-05-19 17:11:14,327 [10] DEBUG NHibernate.Impl.SessionImpl [(null)] - before transaction completion
+2014-05-19 17:11:14,341 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - IDbTransaction Committed
+2014-05-19 17:11:14,341 [10] DEBUG NHibernate.Impl.SessionImpl [(null)] - transaction completion
+2014-05-19 17:11:14,341 [10] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] - aggressively releasing database connection
+2014-05-19 17:11:14,342 [10] DEBUG NHibernate.Connection.ConnectionProvider [(null)] - Closing connection
+2014-05-19 17:11:14,343 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - IDbTransaction disposed.
+2014-05-19 17:11:14,382 [10] INFO  ICanExternalTransferMoney.CanExternalTransferMoney [(null)] - Otrzymano: 32.4 od: bcd do: (7746c6ec-b242-43ec-aecd-43eff6f8a607)
+2014-05-19 17:11:14,382 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Begin (Unspecified)
+2014-05-19 17:11:14,382 [10] DEBUG NHibernate.Connection.DriverConnectionProvider [(null)] - Obtaining IDbConnection from Driver
+2014-05-19 17:11:14,382 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener [(null)] - saving transient instance
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener [(null)] - generated identifier: cd82b71d-71ec-4518-be5e-d33dd3b74eac, using strategy: NHibernate.Id.Assigned
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener [(null)] - saving [ICanExternalTransferMoney.Domain.Potwierdzenie#cd82b71d-71ec-4518-be5e-d33dd3b74eac]
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Start Commit
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - flushing session
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - processing flush-time cascades
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - dirty checking collections
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Flushing entities and processing referenced collections
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Processing unreferenced collections
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Scheduling collection removes/(re)creates/updates
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Flushed: 1 insertions, 0 updates, 0 deletions to 2 objects
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Impl.Printer [(null)] - listing entities:
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Impl.Printer [(null)] - ICanExternalTransferMoney.Domain.Potwierdzenie{'IdPotwierdzenia'='3fbf6d4d-cf2a-4cdb-972e-3c662626820b', 'TypOperacji'='na zewn¹trz', 'NrNadawcy'=null, 'NrOdbiorcy'='abc', 'Kwota'='12,5', 'DataOperacji'='2014-05-19 17:11:14'}
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Impl.Printer [(null)] - ICanExternalTransferMoney.Domain.Potwierdzenie{'IdPotwierdzenia'='cd82b71d-71ec-4518-be5e-d33dd3b74eac', 'TypOperacji'='z zewn¹trz', 'NrNadawcy'='bcd', 'NrOdbiorcy'=null, 'Kwota'='32,4', 'DataOperacji'='2014-05-19 17:11:14'}
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - executing flush
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] - registering flush begin
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] - Inserting entity: [ICanExternalTransferMoney.Domain.Potwierdzenie#cd82b71d-71ec-4518-be5e-d33dd3b74eac]
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - Opened new IDbCommand, open IDbCommands: 1
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - Building an IDbCommand object for the SqlString: INSERT INTO Potwierdzenie (TypOperacji, NrNadawcy, NrOdbiorcy, Kwota, DataOperacji, IdPotwierdzenia) VALUES (?, ?, ?, ?, ?, ?)
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister [(null)] - Dehydrating entity: [ICanExternalTransferMoney.Domain.Potwierdzenie#cd82b71d-71ec-4518-be5e-d33dd3b74eac]
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Type.StringType [(null)] - binding 'z zewn¹trz' to parameter: 0
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Type.StringType [(null)] - binding 'bcd' to parameter: 1
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Type.StringType [(null)] - binding null to parameter: 2
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Type.DoubleType [(null)] - binding '32,4' to parameter: 3
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Type.DateTimeType [(null)] - binding '2014-05-19 17:11:14' to parameter: 4
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Type.GuidType [(null)] - binding 'cd82b71d-71ec-4518-be5e-d33dd3b74eac' to parameter: 5
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.SQL [(null)] - INSERT INTO Potwierdzenie (TypOperacji, NrNadawcy, NrOdbiorcy, Kwota, DataOperacji, IdPotwierdzenia) VALUES (?p0, ?p1, ?p2, ?p3, ?p4, ?p5);?p0 = 'z zewn¹trz' [Type: String (10)], ?p1 = 'bcd' [Type: String (3)], ?p2 = NULL [Type: String (0)], ?p3 = 32,4 [Type: Double (0)], ?p4 = 2014-05-19 17:11:14 [Type: DateTime (0)], ?p5 = cd82b71d-71ec-4518-be5e-d33dd3b74eac [Type: Guid (0)]
+2014-05-19 17:11:14,383 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - Enlist Command
+2014-05-19 17:11:14,384 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - ExecuteNonQuery took 0 ms
+2014-05-19 17:11:14,384 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - ExecuteBatch for 1 statements took 0 ms
+2014-05-19 17:11:14,384 [10] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - Closed IDbCommand, open IDbCommands: 0
+2014-05-19 17:11:14,384 [10] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] - registering flush end
+2014-05-19 17:11:14,384 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener [(null)] - post flush
+2014-05-19 17:11:14,384 [10] DEBUG NHibernate.Impl.SessionImpl [(null)] - before transaction completion
+2014-05-19 17:11:14,397 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - IDbTransaction Committed
+2014-05-19 17:11:14,397 [10] DEBUG NHibernate.Impl.SessionImpl [(null)] - transaction completion
+2014-05-19 17:11:14,397 [10] DEBUG NHibernate.AdoNet.ConnectionManager [(null)] - aggressively releasing database connection
+2014-05-19 17:11:14,397 [10] DEBUG NHibernate.Connection.ConnectionProvider [(null)] - Closing connection
+2014-05-19 17:11:14,397 [10] DEBUG NHibernate.Transaction.AdoTransaction [(null)] - IDbTransaction disposed.
+2014-05-19 17:11:18,124 [9] DEBUG NHibernate.Impl.SessionImpl [(null)] - closing session
+2014-05-19 17:11:18,124 [9] DEBUG NHibernate.AdoNet.AbstractBatcher [(null)] - running BatcherImpl.Dispose(true)
+2014-05-19 17:11:18,129 [9] INFO  ICanExternalTransferMoney.Program [(null)] - NHibernate is not up anymore

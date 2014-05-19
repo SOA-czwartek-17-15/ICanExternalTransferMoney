@@ -9,6 +9,7 @@ using ICanExternalTransferMoney.Domain;
 using System.ServiceModel;
 using log4net;
 using log4net.Config;
+using Contracts;
 
 namespace ICanExternalTransferMoney
 {
@@ -29,8 +30,8 @@ namespace ICanExternalTransferMoney
         {
             if (AccountRepository == null) return Guid.Empty;
             Account toAccount = AccountRepository.GetAccountById(to);
-            string nrKonta = toAccount.AccountNumber;
-            if (AccountRepository.ChangeAccountBalance(to, toAccount.Money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
+            string nrKonta = toAccount.accountNumber;
+            if (AccountRepository.ChangeAccountBalance(to, toAccount.money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
             {
                 //log
                 log.InfoFormat("Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
@@ -51,8 +52,9 @@ namespace ICanExternalTransferMoney
         {
             if (AccountRepository == null) return Guid.Empty;
             Account fromAccount = AccountRepository.GetAccountById(from);
-            string nrKonta = fromAccount.AccountNumber;
-            if (AccountRepository.ChangeAccountBalance(from, fromAccount.Money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
+            string nrKonta = fromAccount.accountNumber;
+            Contracts.Account nowy = new Contracts.Account();
+            if (AccountRepository.ChangeAccountBalance(from, fromAccount.money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
             {
                 //log
                 log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
