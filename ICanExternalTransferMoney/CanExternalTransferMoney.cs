@@ -18,6 +18,7 @@ namespace ICanExternalTransferMoney
     {
         public IAccountRepository AccountRepository { set; get; }
         public ISession Session { set; get; }
+        public ChannelFactory<IAccountRepository> AccountRepoChannelFactory { set; get; }
         private static readonly ILog log = LogManager.GetLogger(typeof(CanExternalTransferMoney));
 
         /// <summary>
@@ -28,47 +29,89 @@ namespace ICanExternalTransferMoney
 
         public Guid ReceiveExternalMoney(string from, Guid to, double howMany)
         {
-            if (AccountRepository == null) return Guid.Empty;
-            Account toAccount = AccountRepository.GetAccountById(to);
-            string nrKonta = toAccount.accountNumber;
-            if (AccountRepository.ChangeAccountBalance(to, toAccount.money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
+            try
             {
-                //log
-                log.InfoFormat("Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
+                if (AccountRepository == null)
+                {
+                    //---------log----------
+                    log.ErrorFormat("AccountRepo is null - NIE Otrzymano: {0} od: {1} do: {2}", howMany, from, to);
+                    Console.WriteLine("AccountRepo is null - NIE Otrzymano: {0} od: {1} do: {2}", howMany, from, to);
+                    //---------log----------
+                    return Guid.Empty;
+                }
+                Account toAccount = AccountRepository.GetAccountById(to);
+                string nrKonta = toAccount.accountNumber;
+                if (AccountRepository.ChangeAccountBalance(to, toAccount.money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
+                {
+                    //---------log----------
+                    Console.WriteLine("\nOtrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
+                    log.InfoFormat("Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
+                    //---------log----------
 
-                //Dodanie do bazy MySQL potwierdzenia operacji
-                ITransaction transaction = Session.BeginTransaction();
-                Potwierdzenie potwierdzenie = new Potwierdzenie("z zewnątrz", from, nrKonta, howMany);
-                Session.Save(potwierdzenie);
-                transaction.Commit();
+                    //Dodanie do bazy MySQL potwierdzenia operacji
+                    ITransaction transaction = Session.BeginTransaction();
+                    Potwierdzenie potwierdzenie = new Potwierdzenie("z zewnątrz", from, nrKonta, howMany);
+                    Session.Save(potwierdzenie);
+                    transaction.Commit();
 
-                return potwierdzenie.IdPotwierdzenia;
+                    return potwierdzenie.IdPotwierdzenia;
+                }
+                log.ErrorFormat("NIE Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
+                return Guid.Empty;
             }
-            log.ErrorFormat("NIE Otrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
-            return Guid.Empty;
+            catch (EndpointNotFoundException ex)
+            {
+                //---------log----------
+                Console.WriteLine("AccountRepo is dead!");
+                log.Error("AccountRepo is dead!");
+                log.ErrorFormat("NIE Otrzymano: {0} od: {1} do: {2}", howMany, from, to);
+                //---------log----------
+                return Guid.Empty;
+            }
         }
 
         public Guid SendExternalMoney(Guid from, string to, double howMany)
         {
-            if (AccountRepository == null) return Guid.Empty;
-            Account fromAccount = AccountRepository.GetAccountById(from);
-            string nrKonta = fromAccount.accountNumber;
-            Contracts.Account nowy = new Contracts.Account();
-            if (AccountRepository.ChangeAccountBalance(from, fromAccount.money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
+            try
             {
-                //log
-                log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
+                if (AccountRepository == null)
+                {
+                    //---------log----------
+                    log.ErrorFormat("AccountRepo is null - NIE Wysłano: {0} do: {1} od: {2}", howMany, to, from);
+                    Console.WriteLine("AccountRepo is null - NIE Wysłano: {0} do: {1} od: {2}", howMany, to, from);
+                    //---------log----------
+                    return Guid.Empty;
+                }
+                Account fromAccount = AccountRepository.GetAccountById(from);
+                string nrKonta = fromAccount.accountNumber;
+                Contracts.Account nowy = new Contracts.Account();
+                if (AccountRepository.ChangeAccountBalance(from, fromAccount.money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
+                {
+                    //---------log----------
+                    log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
+                    Console.WriteLine("\nWysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
+                    //---------log----------
 
-                //Dodanie do bazy MySQL potwierdzenia operacji
-                ITransaction transaction = Session.BeginTransaction();
-                Potwierdzenie potwierdzenie = new Potwierdzenie("na zewnątrz", nrKonta, to, howMany);
-                Session.Save(potwierdzenie);
-                transaction.Commit();
+                    //Dodanie do bazy MySQL potwierdzenia operacji
+                    ITransaction transaction = Session.BeginTransaction();
+                    Potwierdzenie potwierdzenie = new Potwierdzenie("na zewnątrz", nrKonta, to, howMany);
+                    Session.Save(potwierdzenie);
+                    transaction.Commit();
 
-                return potwierdzenie.IdPotwierdzenia;
+                    return potwierdzenie.IdPotwierdzenia;
+                }
+                log.ErrorFormat("NIE Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
+                return Guid.Empty;
             }
-            log.ErrorFormat("NIE Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
-            return Guid.Empty;
+            catch (EndpointNotFoundException ex)
+            {
+                //---------log----------
+                Console.WriteLine("AccountRepo is dead!");
+                log.Error("AccountRepo is dead!");
+                log.ErrorFormat("NIE Wysłano: {0} do: {1} od: {2}", howMany, to, from);
+                //---------log----------
+                return Guid.Empty;
+            }
         }
     }
 }

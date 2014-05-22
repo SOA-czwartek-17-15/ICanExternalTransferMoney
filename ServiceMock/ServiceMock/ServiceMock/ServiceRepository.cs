@@ -19,7 +19,7 @@ namespace ServiceMock
         /*Pobranie adresu Serwisu*/
         public string GetServiceLocation(String Name)
         {
-            if (Name.Equals("IAccountRepository"))
+            if (Name.Equals("IAccountService"))
             {
                 Console.WriteLine("GETSERVICELOCATION: {0}", Name);
                 return "net.tcp://localhost:54321/AccountRepo";

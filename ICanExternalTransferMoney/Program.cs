@@ -19,12 +19,14 @@ namespace ICanExternalTransferMoney
 {
     class Program
     {
-        //TODO logowanie - log4net
-
         private IServiceRepository serviceRepo;
         private CanExternalTransferMoney transfer;
         private string accountRepositoryAddress = null;
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        private ChannelFactory<IServiceRepository> servCF;
+        private string serviceAdress = ConfigurationManager.AppSettings["serviceAddress"];
+
+        private bool registerdOnServiceRepo = false;
 
         static void Main(string[] args) 
         {
@@ -39,17 +41,6 @@ namespace ICanExternalTransferMoney
 
         public Program() 
         {
-            //Wyciąganie adresu ServiceRepository z App.config i uzyskanie ServiceRepo
-            string serviceRepositoryAddress = ConfigurationManager.AppSettings["serviceRepositoryAddress"];
-            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-            ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(serviceRepositoryAddress));
-            serviceRepo = cf.CreateChannel();
-
-            //---------log----------
-            log.Info("Got App.config adress and servicerepo");
-            //---------log----------
-
-
             //Otwarcie sesji NHibernate
             NHibernate.Cfg.Configuration config = new NHibernate.Cfg.Configuration();
             config.Configure();
@@ -59,23 +50,28 @@ namespace ICanExternalTransferMoney
             ISession session = factory.OpenSession();
 
             //---------log----------
+            Console.WriteLine("NHibernate is opened");
             log.Info("NHibernate is opened");
             //---------log----------
 
             //Utworzenie Serwisu ICanExternalTransferMoney
             transfer = new CanExternalTransferMoney(session);
-            string serviceAdress = ConfigurationManager.AppSettings["serviceAddress"];
             var sh = new ServiceHost(transfer, new Uri[] { new Uri(serviceAdress) });
             NetTcpBinding bindingOUT = new NetTcpBinding(SecurityMode.None);
             sh.AddServiceEndpoint(typeof(Contracts.ICanExternalTransferMoney), bindingOUT, serviceAdress);
             sh.Open();
 
             //---------log----------
+            Console.WriteLine("Service has been made");
             log.Info("Service has been made");
             //---------log----------
 
-            //Rejestracja Serwisu w ServiceRepository i odpalenie timera
-            serviceRepo.RegisterService("ICanExternalTransferMoney", serviceAdress);
+            //Wyciąganie adresu ServiceRepository z App.config i uzyskanie ServiceRepo
+            string serviceRepositoryAddress = ConfigurationManager.AppSettings["serviceRepositoryAddress"];
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+            servCF = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(serviceRepositoryAddress));
+
+            //timer
             Timer timer = new Timer();
             timer.Interval = Double.Parse(ConfigurationManager.AppSettings["aliveSignalDelay"]);
             timer.Elapsed += new ElapsedEventHandler(TimerOnTick);
@@ -83,24 +79,49 @@ namespace ICanExternalTransferMoney
             TimerOnTick(null,null);
 
             //---------log----------
-            log.Info("Service has been registered, timer is up");
+            Console.WriteLine("Timer started");
+            log.Info("Timer started");
             //---------log----------
 
-
-
-            //Pewnie pójdzie do usunięcie WriteLine jak będą logi, ReadLine potrzebny
-            Console.WriteLine("Service Repo: {0}", serviceRepositoryAddress);
+            //ReadLine kończący program
+            Console.WriteLine("ICanExternalTransferMoney is on!");
             Console.WriteLine("Kliknij Enter, aby wyłączyć serwis...");
             Console.ReadLine();
 
             //Zamknięcie sesji nhibernate
             session.Close();
-            timer.Stop();
-            serviceRepo.Unregister("ICanExternalTransferMoney");
-
             //---------log----------
+            Console.WriteLine("NHibernate is not up anymore");
             log.Info("NHibernate is not up anymore");
             //---------log----------
+
+            timer.Stop();
+
+            //---------log----------
+            Console.WriteLine("Timer stopped");
+            log.Info("Timer stopped");
+            //---------log----------
+
+            try
+            {
+                if (registerdOnServiceRepo)
+                {
+                    serviceRepo = servCF.CreateChannel();
+                    serviceRepo.Unregister("ICanExternalTransferMoney");
+
+                    //---------log----------
+                    Console.WriteLine("Unregistered in IServiceRepository");
+                    log.Info("Unregistered in IServiceRepository");
+                    //---------log----------
+                }
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                //---------log----------
+                Console.WriteLine("Unregister failed, because Service is dead.");
+                log.Info("Unregister failed, because Service is dead.");
+                //---------log----------
+            }
 
         }
 
@@ -112,24 +133,76 @@ namespace ICanExternalTransferMoney
         /// <param name="e"></param>
         private void TimerOnTick(object sender, EventArgs e)
         {
-            serviceRepo.Alive("ICanExternalTransferMoney");
-            string address = serviceRepo.GetServiceLocation("IAccountRepository");
-            if (address == null || !address.Equals(accountRepositoryAddress)){
-                if (address != null)
-                {
-                    accountRepositoryAddress = address;
-                    NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-                    ChannelFactory<IAccountRepository> cf = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(accountRepositoryAddress));
-                    IAccountRepository accountRepository = cf.CreateChannel();
-                    transfer.AccountRepository = accountRepository;
-                    log.InfoFormat("New IAccountRepository address: {0}",address);
-                }
-                else
-                {
-                    transfer.AccountRepository = null;
-                    accountRepositoryAddress = null;
-                }
-            }            
+           try
+           {
+                //Rejestracja Serwisu w ServiceRepository i odpalenie timera
+               if (!registerdOnServiceRepo)
+               {
+                   serviceRepo = servCF.CreateChannel();
+                   serviceRepo.RegisterService("ICanExternalTransferMoney", serviceAdress);
+                   registerdOnServiceRepo = true;
+
+                   //---------log----------
+                   Console.WriteLine("Service has been registered");
+                   log.Info("Service has been registered");
+                   //---------log----------
+               }
+
+               try
+               {
+                   serviceRepo = servCF.CreateChannel();
+                   serviceRepo.Alive("ICanExternalTransferMoney");
+                   Console.Write(".");
+
+                   serviceRepo = servCF.CreateChannel();
+                   string address = serviceRepo.GetServiceLocation("IAccountService");
+                   if (address == null || !address.Equals(accountRepositoryAddress))
+                   {
+                       if (address != null)
+                       {
+                           accountRepositoryAddress = address;
+                           NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                           ChannelFactory<IAccountRepository> cf = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(accountRepositoryAddress));
+                           IAccountRepository accountRepository = cf.CreateChannel();
+                           transfer.AccountRepoChannelFactory = cf;
+                           transfer.AccountRepository = accountRepository;
+
+                           //---------log----------
+                           log.InfoFormat("New IAccountRepository address: {0}", address);
+                           Console.WriteLine("New IAccountRepository address: {0}", address);
+                           //---------log----------
+                       }
+                       else
+                       {
+                           transfer.AccountRepository = null;
+                           accountRepositoryAddress = null;
+
+                           //---------log----------
+                           log.InfoFormat("AccountRepo not registered on ServiceRepo");
+                           Console.WriteLine("\nAccountRepo not registered on ServiceRepo");
+                           //---------log----------
+                       }
+                   }
+               }
+               catch (EndpointNotFoundException ex)
+               {
+                   //---------log----------
+                   Console.WriteLine("\nAlive signal not send. ServiceRepo is dead!");
+                   log.Error("Alive signal not send. ServiceRepo is dead!");
+                   //---------log----------
+                   registerdOnServiceRepo = false;
+               }
+            }
+            catch (EndpointNotFoundException ex) {
+                //---------log----------
+                Console.WriteLine("ServiceRepository not found. Retry after 3s.");
+                log.Error("ServiceRepository not found. Retry after 3s.");
+                //---------log----------
+            }
+            catch (Exception ex) { 
+                Console.WriteLine(ex.Message);
+                log.Error(ex.Message);
+            }
         }
     }
 }

@@ -38,8 +38,11 @@ namespace ServiceMock
                 ChannelFactory<Contracts.ICanExternalTransferMoney> cf = new ChannelFactory<Contracts.ICanExternalTransferMoney>(binding, new EndpointAddress("net.tcp://localhost:41234/ICanExternalTransferMoney"));
                 transfer = cf.CreateChannel();
 
-                transfer.SendExternalMoney(Guid.NewGuid(), "abc", 12.5);
-                transfer.ReceiveExternalMoney("bcd", Guid.NewGuid() , 32.4);
+                Guid wysylka = transfer.SendExternalMoney(Guid.NewGuid(), "abc", 12.5);
+                Guid odbior = transfer.ReceiveExternalMoney("bcd", Guid.NewGuid() , 32.4);
+
+                Console.WriteLine(wysylka);
+                Console.WriteLine(odbior);
 
                 tekst = Console.ReadLine();
             }
