@@ -39,8 +39,10 @@ namespace ICanExternalTransferMoney
                     //---------log----------
                     return Guid.Empty;
                 }
+                AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 Account toAccount = AccountRepository.GetAccountById(to);
                 string nrKonta = toAccount.accountNumber;
+                AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 if (AccountRepository.ChangeAccountBalance(to, toAccount.money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
                 {
                     //---------log----------
@@ -82,9 +84,11 @@ namespace ICanExternalTransferMoney
                     //---------log----------
                     return Guid.Empty;
                 }
+                AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 Account fromAccount = AccountRepository.GetAccountById(from);
                 string nrKonta = fromAccount.accountNumber;
                 Contracts.Account nowy = new Contracts.Account();
+                AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 if (AccountRepository.ChangeAccountBalance(from, fromAccount.money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
                 {
                     //---------log----------
