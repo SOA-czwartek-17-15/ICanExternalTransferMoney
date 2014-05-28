@@ -18,9 +18,9 @@ namespace ServiceMock
             acc.AccountNumber = "123456";
         }
 
-        public long CreateAccount(int clientId, Account details)
+        public bool CreateAccount(Account details)
         {
-            return 0;
+            return false;
         }
 
         public Account GetAccountInformation(string accountNumber)

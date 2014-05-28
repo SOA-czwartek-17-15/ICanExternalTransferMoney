@@ -17,15 +17,18 @@ namespace ICanExternalTransferMoney
     public class CanExternalTransferMoney : Contracts.ICanExternalTransferMoney
     {
         public IAccountRepository AccountRepository { set; get; }
-        public ISession Session { set; get; }
         public ChannelFactory<IAccountRepository> AccountRepoChannelFactory { set; get; }
         private static readonly ILog log = LogManager.GetLogger(typeof(CanExternalTransferMoney));
+        public DAO DataAccessObject{ set; get;}
 
         /// <summary>
         /// Konstruktor implementacji serwisu
         /// </summary>
         /// <param name="_Session">Sesja NHibernate</param>
-        public CanExternalTransferMoney(ISession _Session){ Session = _Session; }
+        public CanExternalTransferMoney(DAO _dao)
+        {
+            DataAccessObject = _dao; 
+        }
 
         public Guid ReceiveExternalMoney(string from, Guid to, double howMany)
         {
@@ -41,9 +44,9 @@ namespace ICanExternalTransferMoney
                 }
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 Account toAccount = AccountRepository.GetAccountById(to);
-                string nrKonta = toAccount.accountNumber;
+                string nrKonta = toAccount.AccountNumber;
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
-                if (AccountRepository.ChangeAccountBalance(to, toAccount.money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
+                if (AccountRepository.ChangeAccountBalance(to, toAccount.Money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
                 {
                     //---------log----------
                     Console.WriteLine("\nOtrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
@@ -51,10 +54,14 @@ namespace ICanExternalTransferMoney
                     //---------log----------
 
                     //Dodanie do bazy MySQL potwierdzenia operacji
-                    ITransaction transaction = Session.BeginTransaction();
                     Potwierdzenie potwierdzenie = new Potwierdzenie("z zewnątrz", from, nrKonta, howMany);
-                    Session.Save(potwierdzenie);
-                    transaction.Commit();
+                    if (!DataAccessObject.SavePotwierdzenieToBase(potwierdzenie))
+                    {
+                        //---------log----------
+                        Console.WriteLine("Nie zapisano do bazy!");
+                        log.Error("Nie zapisano do bazy!");
+                        //---------log----------
+                    }
 
                     return potwierdzenie.IdPotwierdzenia;
                 }
@@ -86,10 +93,10 @@ namespace ICanExternalTransferMoney
                 }
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 Account fromAccount = AccountRepository.GetAccountById(from);
-                string nrKonta = fromAccount.accountNumber;
+                string nrKonta = fromAccount.AccountNumber;
                 Contracts.Account nowy = new Contracts.Account();
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
-                if (AccountRepository.ChangeAccountBalance(from, fromAccount.money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
+                if (AccountRepository.ChangeAccountBalance(from, fromAccount.Money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
                 {
                     //---------log----------
                     log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
@@ -97,10 +104,15 @@ namespace ICanExternalTransferMoney
                     //---------log----------
 
                     //Dodanie do bazy MySQL potwierdzenia operacji
-                    ITransaction transaction = Session.BeginTransaction();
+                    
                     Potwierdzenie potwierdzenie = new Potwierdzenie("na zewnątrz", nrKonta, to, howMany);
-                    Session.Save(potwierdzenie);
-                    transaction.Commit();
+                    if (!DataAccessObject.SavePotwierdzenieToBase(potwierdzenie))
+                    {
+                        //---------log----------
+                        Console.WriteLine("Nie zapisano do bazy!");
+                        log.Error("Nie zapisano do bazy!");
+                        //---------log----------
+                    }
 
                     return potwierdzenie.IdPotwierdzenia;
                 }

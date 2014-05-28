@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CanExternalTransferMoney.cs" />
+    <Compile Include="DAO.cs" />
     <Compile Include="Domain\Potwierdzenie.cs" />
+    <Compile Include="NHibernateDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

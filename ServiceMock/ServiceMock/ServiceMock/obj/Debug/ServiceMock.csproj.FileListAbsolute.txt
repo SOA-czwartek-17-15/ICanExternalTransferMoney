@@ -4,3 +4,4 @@ C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceM
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceMock\ServiceMock\bin\Debug\ServiceMock.pdb
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceMock\ServiceMock\obj\Debug\ServiceMock.exe
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceMock\ServiceMock\obj\Debug\ServiceMock.pdb
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ServiceMock\ServiceMock\ServiceMock\bin\Debug\Contracts.dll

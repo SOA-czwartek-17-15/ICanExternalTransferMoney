@@ -5,10 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using System.Configuration;
-using NHibernate;
-using NHibernate.Cfg;
 using ICanExternalTransferMoney.Domain;
-using NHibernate.Tool.hbm2ddl;
 using Contracts;
 using System.Timers;
 using log4net;
@@ -41,21 +38,16 @@ namespace ICanExternalTransferMoney
 
         public Program() 
         {
-            //Otwarcie sesji NHibernate
-            NHibernate.Cfg.Configuration config = new NHibernate.Cfg.Configuration();
-            config.Configure();
-            config.AddAssembly(typeof(Potwierdzenie).Assembly);
-            new SchemaExport(config).Execute(false, false, false); //Drugi na true gdy chcemy dropTable robić przy każdym uruchomieniu, false gdy mamy już uworzoną tabele
-            ISessionFactory factory = config.BuildSessionFactory();
-            ISession session = factory.OpenSession();
+            //Stworzenie DAO
+            DAO dao = new NHibernateDAO();
 
             //---------log----------
-            Console.WriteLine("NHibernate is opened");
-            log.Info("NHibernate is opened");
+            Console.WriteLine("DAO is created and avaible");
+            log.Info("DAO is created and avaible");
             //---------log----------
 
             //Utworzenie Serwisu ICanExternalTransferMoney
-            transfer = new CanExternalTransferMoney(session);
+            transfer = new CanExternalTransferMoney(dao);
             var sh = new ServiceHost(transfer, new Uri[] { new Uri(serviceAdress) });
             NetTcpBinding bindingOUT = new NetTcpBinding(SecurityMode.None);
             sh.AddServiceEndpoint(typeof(Contracts.ICanExternalTransferMoney), bindingOUT, serviceAdress);
@@ -88,13 +80,6 @@ namespace ICanExternalTransferMoney
             Console.WriteLine("Kliknij Enter, aby wyłączyć serwis...");
             Console.ReadLine();
 
-            //Zamknięcie sesji nhibernate
-            session.Close();
-            //---------log----------
-            Console.WriteLine("NHibernate is not up anymore");
-            log.Info("NHibernate is not up anymore");
-            //---------log----------
-
             timer.Stop();
 
             //---------log----------
@@ -123,6 +108,11 @@ namespace ICanExternalTransferMoney
                 //---------log----------
             }
 
+            sh.Close();
+            //---------log----------
+            Console.WriteLine("Service Endpoint Closed.");
+            log.Info("Service Endpoint Closed.");
+            //---------log----------
         }
 
         /// <summary>
