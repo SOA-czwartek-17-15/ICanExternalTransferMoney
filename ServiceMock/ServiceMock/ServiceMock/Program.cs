@@ -35,7 +35,7 @@ namespace ServiceMock
             {
                 Contracts.ICanExternalTransferMoney transfer;
                 NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-                ChannelFactory<Contracts.ICanExternalTransferMoney> cf = new ChannelFactory<Contracts.ICanExternalTransferMoney>(binding, new EndpointAddress("net.tcp://localhost:41234/ICanExternalTransferMoney"));
+                ChannelFactory<Contracts.ICanExternalTransferMoney> cf = new ChannelFactory<Contracts.ICanExternalTransferMoney>(binding, new EndpointAddress("net.tcp://192.168.0.99:50008/ICanExternalTransferMoney"));
                 transfer = cf.CreateChannel();
 
                 Guid wysylka = transfer.SendExternalMoney(Guid.NewGuid(), "abc", 12.5);

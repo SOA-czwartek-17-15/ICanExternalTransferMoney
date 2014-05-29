@@ -48,7 +48,7 @@ namespace ICanExternalTransferMoney
 
             //Utworzenie Serwisu ICanExternalTransferMoney
             transfer = new CanExternalTransferMoney(dao);
-            var sh = new ServiceHost(transfer, new Uri[] { new Uri(serviceAdress) });
+            var sh = new ServiceHost(transfer, new Uri[] { new Uri("net.tcp://0.0.0.0:50008/ICanExternalTransferMoney") });
             NetTcpBinding bindingOUT = new NetTcpBinding(SecurityMode.None);
             sh.AddServiceEndpoint(typeof(Contracts.ICanExternalTransferMoney), bindingOUT, serviceAdress);
             sh.Open();
@@ -169,7 +169,7 @@ namespace ICanExternalTransferMoney
 
                            //---------log----------
                            log.InfoFormat("AccountRepo not registered on ServiceRepo");
-                           Console.WriteLine("\nAccountRepo not registered on ServiceRepo");
+                           Console.WriteLine("AccountRepo not registered on ServiceRepo");
                            //---------log----------
                        }
                    }

@@ -24,7 +24,7 @@ namespace ICanExternalTransferMoney
         /// <summary>
         /// Konstruktor implementacji serwisu
         /// </summary>
-        /// <param name="_Session">Sesja NHibernate</param>
+        /// <param name="_Session">DAO</param>
         public CanExternalTransferMoney(DAO _dao)
         {
             DataAccessObject = _dao; 
@@ -44,6 +44,14 @@ namespace ICanExternalTransferMoney
                 }
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 Account toAccount = AccountRepository.GetAccountById(to);
+                if (toAccount == null)
+                {
+                    //---------log----------
+                    log.ErrorFormat("Account is null: {0}",to);
+                    Console.WriteLine("Account is null: {0}", to);
+                    //---------log----------
+                    return Guid.Empty;
+                }
                 string nrKonta = toAccount.AccountNumber;
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 if (AccountRepository.ChangeAccountBalance(to, toAccount.Money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
@@ -93,6 +101,14 @@ namespace ICanExternalTransferMoney
                 }
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
                 Account fromAccount = AccountRepository.GetAccountById(from);
+                if (fromAccount == null)
+                {
+                    //---------log----------
+                    log.ErrorFormat("Account is null: {0}", from);
+                    Console.WriteLine("Account is null: {0}", from);
+                    //---------log----------
+                    return Guid.Empty;
+                }
                 string nrKonta = fromAccount.AccountNumber;
                 Contracts.Account nowy = new Contracts.Account();
                 AccountRepository = AccountRepoChannelFactory.CreateChannel();
