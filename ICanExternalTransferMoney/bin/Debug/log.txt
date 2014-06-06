@@ -113,3 +113,802 @@ DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0
 2014-05-29 18:42:45,400 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Timer stopped
 2014-05-29 18:42:45,643 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Unregistered in IServiceRepository
 2014-05-29 18:42:45,734 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Service Endpoint Closed.
+2014-06-05 17:23:15,746 [10] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-06-05 17:23:15,779 [10] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-06-05 17:23:15,781 [10] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-06-05 17:23:15,782 [10] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-06-05 17:23:15,819 [10] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-06-05 17:23:15,877 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:15,929 [10] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-06-05 17:23:15,977 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:15,979 [10] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:23:15,979 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:23:15,979 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:23:15,980 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:23:15,981 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:23:15,993 [10] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:23:15,993 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:23:15,994 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:23:15,994 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:23:15,994 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:23:16,005 [10] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:23:16,005 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:23:16,005 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:23:16,005 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:23:16,005 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:23:16,016 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:16,019 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:16,057 [10] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-06-05 17:23:16,058 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-06-05 17:23:16,060 [10] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-06-05 17:23:16,157 [10] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:23:16,232 [10] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:23:16,308 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-06-05 17:23:16,309 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-06-05 17:23:16,309 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-06-05 17:23:16,309 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-06-05 17:23:16,309 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-06-05 17:23:16,309 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-06-05 17:23:16,310 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-06-05 17:23:16,312 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-06-05 17:23:16,313 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:23:16,314 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-06-05 17:23:16,314 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:23:16,314 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-06-05 17:23:16,314 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-06-05 17:23:16,331 [10] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-06-05 17:23:17,906 [10] ERROR ICanExternalTransferMoney.Program [(null)] - Unable to connect to any of the specified MySQL hosts.
+2014-06-05 17:23:57,730 [8] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-06-05 17:23:57,765 [8] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-06-05 17:23:57,765 [8] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-06-05 17:23:57,766 [8] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-06-05 17:23:57,801 [8] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-06-05 17:23:57,857 [8] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:57,906 [8] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-06-05 17:23:57,957 [8] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:57,960 [8] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:23:57,960 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:23:57,960 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:23:57,960 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:23:57,961 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:23:57,974 [8] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:23:57,974 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:23:57,974 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:23:57,974 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:23:57,974 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:23:57,985 [8] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:23:57,986 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:23:57,986 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:23:57,986 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:23:57,986 [8] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:23:57,996 [8] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:57,999 [8] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:23:58,036 [8] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-06-05 17:23:58,036 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-06-05 17:23:58,038 [8] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-06-05 17:23:58,089 [8] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:23:58,132 [8] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:23:58,158 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-06-05 17:23:58,159 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-06-05 17:23:58,159 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-06-05 17:23:58,159 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-06-05 17:23:58,159 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-06-05 17:23:58,160 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-06-05 17:23:58,160 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-06-05 17:23:58,161 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-06-05 17:23:58,162 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:23:58,162 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-06-05 17:23:58,163 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:23:58,163 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-06-05 17:23:58,163 [8] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-06-05 17:23:58,178 [8] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-06-05 17:23:58,495 [8] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] - no name configured
+2014-06-05 17:23:58,517 [8] INFO  ICanExternalTransferMoney.Program [(null)] - DAO is created and avaible
+2014-06-05 17:23:59,289 [8] ERROR ICanExternalTransferMoney.Program [(null)] - Podczas nas³uchiwania na punkcie koñcowym IP 192.168.0.99:50008 wyst¹pi³ b³¹d TCP (10049: ¯¹dany adres jest nieprawid³owy w tym kontekœcie).
+2014-06-05 17:24:53,346 [9] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-06-05 17:24:53,379 [9] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-06-05 17:24:53,380 [9] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-06-05 17:24:53,381 [9] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-06-05 17:24:53,415 [9] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-06-05 17:24:53,471 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:24:53,520 [9] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-06-05 17:24:53,566 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:24:53,569 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:24:53,569 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:24:53,569 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:24:53,569 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:24:53,570 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:24:53,582 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:24:53,582 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:24:53,583 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:24:53,583 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:24:53,583 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:24:53,594 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:24:53,594 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:24:53,594 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:24:53,594 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:24:53,594 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:24:53,605 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:24:53,608 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:24:53,645 [9] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-06-05 17:24:53,645 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-06-05 17:24:53,647 [9] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-06-05 17:24:53,698 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:24:53,743 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:24:53,785 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-06-05 17:24:53,786 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-06-05 17:24:53,786 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-06-05 17:24:53,786 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-06-05 17:24:53,786 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-06-05 17:24:53,786 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-06-05 17:24:53,787 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-06-05 17:24:53,788 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-06-05 17:24:53,789 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:24:53,789 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-06-05 17:24:53,790 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:24:53,790 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-06-05 17:24:53,791 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-06-05 17:24:53,805 [9] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-06-05 17:24:54,165 [9] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] - no name configured
+2014-06-05 17:24:54,186 [9] INFO  ICanExternalTransferMoney.Program [(null)] - DAO is created and avaible
+2014-06-05 17:24:54,849 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been made
+2014-06-05 17:25:16,175 [9] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:16,176 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Timer started
+2014-06-05 17:25:18,998 [6] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:21,991 [16] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:25,032 [17] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:28,026 [18] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:32,053 [19] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:36,052 [20] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:40,150 [6] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:43,151 [14] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:46,173 [16] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:49,176 [17] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:52,163 [18] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:55,145 [19] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:25:58,173 [20] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:01,301 [6] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:04,302 [13] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:07,321 [14] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:10,336 [16] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:13,307 [17] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:16,318 [18] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:19,326 [19] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:22,367 [20] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:25,400 [6] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:26,153 [17] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:26:26,153 [19] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:26:26,155 [20] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:26:26,205 [17] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:26:26,205 [19] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:26:26,211 [20] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:26:28,284 [18] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:26:28,380 [13] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:28,387 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:26:28,389 [18] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:26:31,393 [14] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:26:31,403 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:26:34,386 [16] ERROR ICanExternalTransferMoney.Program [(null)] - ServiceRepository not found. Retry after 3s.
+2014-06-05 17:27:34,433 [6] ERROR ICanExternalTransferMoney.Program [(null)] - Operacja otwierania nie zakoñczy³a siê w ci¹gu przydzielonego limitu czasu 00:01:00. Czas przydzielony na tê operacjê móg³ byæ czêœci¹ d³u¿szego limitu czasu.
+2014-06-05 17:27:37,449 [16] ERROR ICanExternalTransferMoney.Program [(null)] - Operacja otwierania nie zakoñczy³a siê w ci¹gu przydzielonego limitu czasu 00:01:00. Czas przydzielony na tê operacjê móg³ byæ czêœci¹ d³u¿szego limitu czasu.
+2014-06-05 17:27:40,407 [17] ERROR ICanExternalTransferMoney.Program [(null)] - Operacja otwierania nie zakoñczy³a siê w ci¹gu przydzielonego limitu czasu 00:01:00. Czas przydzielony na tê operacjê móg³ byæ czêœci¹ d³u¿szego limitu czasu.
+2014-06-05 17:27:45,061 [9] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-06-05 17:27:45,096 [9] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-06-05 17:27:45,097 [9] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-06-05 17:27:45,098 [9] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-06-05 17:27:45,133 [9] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-06-05 17:27:45,188 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:27:45,237 [9] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-06-05 17:27:45,284 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:27:45,286 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:27:45,286 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:27:45,286 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:27:45,287 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:27:45,288 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:27:45,300 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:27:45,300 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:27:45,300 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:27:45,300 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:27:45,300 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:27:45,312 [9] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:27:45,312 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:27:45,312 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:27:45,312 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:27:45,312 [9] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:27:45,322 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:27:45,326 [9] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:27:45,363 [9] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-06-05 17:27:45,363 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-06-05 17:27:45,364 [9] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-06-05 17:27:45,416 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:27:45,458 [9] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:27:45,484 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-06-05 17:27:45,485 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-06-05 17:27:45,485 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-06-05 17:27:45,485 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-06-05 17:27:45,485 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-06-05 17:27:45,485 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-06-05 17:27:45,486 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-06-05 17:27:45,487 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-06-05 17:27:45,487 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:27:45,488 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-06-05 17:27:45,488 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:27:45,489 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-06-05 17:27:45,489 [9] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-06-05 17:27:45,504 [9] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-06-05 17:27:45,791 [9] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] - no name configured
+2014-06-05 17:27:45,811 [9] INFO  ICanExternalTransferMoney.Program [(null)] - DAO is created and avaible
+2014-06-05 17:27:46,440 [9] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been made
+2014-06-05 17:28:12,701 [10] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 3.3.1.4000 (3.3.3.SP1)
+2014-06-05 17:28:12,737 [10] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2014-06-05 17:28:12,738 [10] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2014-06-05 17:28:12,739 [10] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2014-06-05 17:28:12,773 [10] INFO  NHibernate.Cfg.Configuration [(null)] - Mapping resource: ICanExternalTransferMoney.Mapping.Potwierdzenie.hbm.xml
+2014-06-05 17:28:12,829 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:28:12,877 [10] INFO  NHibernate.Cfg.XmlHbmBinding.Binder [(null)] - Mapping class: ICanExternalTransferMoney.Domain.Potwierdzenie -> Potwierdzenie
+2014-06-05 17:28:12,923 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:28:12,926 [10] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:28:12,926 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:28:12,926 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:28:12,926 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:28:12,927 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:28:12,940 [10] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:28:12,940 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:28:12,940 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:28:12,940 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:28:12,940 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:28:12,952 [10] INFO  NHibernate.Cfg.Configuration [(null)] - checking mappings queue
+2014-06-05 17:28:12,952 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-many association mappings
+2014-06-05 17:28:12,952 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing one-to-one association property references
+2014-06-05 17:28:12,952 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing foreign key constraints
+2014-06-05 17:28:12,952 [10] INFO  NHibernate.Cfg.Configuration [(null)] - processing filters (second pass)
+2014-06-05 17:28:12,962 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:28:12,965 [10] INFO  NHibernate.Dialect.Dialect [(null)] - Using dialect: NHibernate.Dialect.MySQLDialect
+2014-06-05 17:28:13,002 [10] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory [(null)] - Using dialect defined converter
+2014-06-05 17:28:13,002 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Generate SQL with comments: disabled
+2014-06-05 17:28:13,003 [10] INFO  NHibernate.Connection.ConnectionProvider [(null)] - Configuring ConnectionProvider
+2014-06-05 17:28:13,055 [10] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlConnection, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:28:13,099 [10] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type MySql.Data.MySqlClient.MySqlCommand, MySql.Data.
+System.IO.FileNotFoundException: Nie mo¿na za³adowaæ pliku lub zestawu 'MySql.Data' lub jednej z jego zale¿noœci. Nie mo¿na odnaleŸæ okreœlonego pliku.
+Nazwa pliku: 'MySql.Data'
+   w System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   w System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   w System.Reflection.Assembly.Load(String assemblyString)
+   w NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError) w p:\nhibernate-core\src\NHibernate\Util\ReflectHelper.cs:wiersz 283
+
+=== Informacje o stanie sprzed powi¹zania ===
+DZIENNIK: DisplayName = MySql.Data
+ (Partial)
+OSTRZE¯ENIE: Podano czêœciowe informacje o wi¹zaniu dla zestawu:
+OSTRZE¯ENIE: Nazwa zestawu: MySql.Data | Identyfikator domeny: 1
+OSTRZE¯ENIE: Wi¹zanie czêœciowe wystêpuje w przypadku podania tylko czêœci nazwy wyœwietlanej zestawu.
+OSTRZE¯ENIE: Wskutek tego konsolidator mo¿e za³adowaæ niepoprawny zestaw.
+OSTRZE¯ENIE: Zaleca siê podanie dla zestawu w pe³ni okreœlonej to¿samoœci tekstowej,
+OSTRZE¯ENIE: która sk³ada siê z nazwy prostej, wersji, kultury i tokenu klucza publicznego.
+OSTRZE¯ENIE: Aby uzyskaæ wiêcej informacji i poznaæ typowe rozwi¹zania tego problemu, zobacz oficjalny dokument http://go.microsoft.com/fwlink/?LinkId=109270.
+DZIENNIK: Appbase = file:///C:/Users/Mateusz/Documents/GitHub/ICanExternalTransferMoney/ICanExternalTransferMoney/bin/Debug/
+DZIENNIK: Initial PrivatePath = NULL
+Zestaw wywo³uj¹cy: NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+DZIENNIK: to powi¹zanie zaczyna siê w kontekœcie ³adowania default.
+DZIENNIK: u¿ycie pliku konfiguracji aplikacji: C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\ICanExternalTransferMoney.vshost.exe.Config
+DZIENNIK: u¿ycie pliku konfiguracji hosta: 
+DZIENNIK: u¿ycie pliku konfiguracji komputera z C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+DZIENNIK: zasady nie s¹ stosowane do odwo³ania w tym momencie (prywatne, niestandardowe, czêœciowe lub oparte na lokalizacji powi¹zanie zestawu).
+DZIENNIK: to samo powi¹zanie by³o widoczne wczeœniej i nie powiod³o siê z hr = 0x80070002.
+
+2014-06-05 17:28:13,125 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2014-06-05 17:28:13,126 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Optimize cache for minimal puts: False
+2014-06-05 17:28:13,126 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Connection release mode: auto
+2014-06-05 17:28:13,126 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default batch fetch size: 1
+2014-06-05 17:28:13,126 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Statistics: disabled
+2014-06-05 17:28:13,126 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Deleted entity synthetic identifier rollback: disabled
+2014-06-05 17:28:13,127 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2014-06-05 17:28:13,128 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Query language substitutions: {}
+2014-06-05 17:28:13,129 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:28:13,129 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Order SQL inserts for batching: disabled
+2014-06-05 17:28:13,130 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2014-06-05 17:28:13,131 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Default entity-mode: Poco
+2014-06-05 17:28:13,131 [10] INFO  NHibernate.Cfg.SettingsFactory [(null)] - Named query checking : enabled
+2014-06-05 17:28:13,146 [10] INFO  NHibernate.Impl.SessionFactoryImpl [(null)] - building session factory
+2014-06-05 17:28:13,427 [10] INFO  NHibernate.Impl.SessionFactoryObjectFactory [(null)] - no name configured
+2014-06-05 17:28:13,447 [10] INFO  ICanExternalTransferMoney.Program [(null)] - DAO is created and avaible
+2014-06-05 17:28:14,067 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been made
+2014-06-05 17:28:14,350 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:28:14,376 [10] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:14,376 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Timer started
+2014-06-05 17:28:17,137 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:20,104 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:23,108 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:26,119 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:29,159 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:32,113 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:35,115 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:28:40,773 [6] ERROR ICanExternalTransferMoney.Program [(null)] - Po³¹czenie gniazda zosta³o przerwane. Mog³o to byæ spowodowane b³êdnym przetwarzaniem komunikatu, przekroczeniem limitu czasu odbioru przez zdalny host lub problemem z zasobami sieciowymi podleg³ej sieci. Limit czasu lokalnego gniazda wynosi „00:00:59.9979850”.
+2014-06-05 17:29:02,244 [17] ERROR ICanExternalTransferMoney.Program [(null)] - Alive signal not send. ServiceRepo is dead!
+2014-06-05 17:29:05,251 [6] ERROR ICanExternalTransferMoney.Program [(null)] - Alive signal not send. ServiceRepo is dead!
+2014-06-05 17:29:05,530 [22] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:29:05,543 [17] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:29:05,550 [22] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:05,556 [17] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:07,148 [21] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:08,257 [18] ERROR ICanExternalTransferMoney.Program [(null)] - Alive signal not send. ServiceRepo is dead!
+2014-06-05 17:29:08,269 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:11,238 [19] ERROR ICanExternalTransferMoney.Program [(null)] - Alive signal not send. ServiceRepo is dead!
+2014-06-05 17:29:11,268 [6] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:29:11,284 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:14,280 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:15,270 [20] ERROR ICanExternalTransferMoney.Program [(null)] - Alive signal not send. ServiceRepo is dead!
+2014-06-05 17:29:17,273 [6] INFO  ICanExternalTransferMoney.Program [(null)] - Service has been registered
+2014-06-05 17:29:17,291 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:20,280 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:23,284 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:26,281 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:29,281 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:32,284 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:35,286 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:38,287 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:41,289 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:44,289 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:47,289 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:50,292 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:53,292 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:56,293 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:29:59,290 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:02,296 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:05,298 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:08,299 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:11,299 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:14,300 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:17,302 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:20,304 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:23,303 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:26,305 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:29,307 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:32,306 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:35,308 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:38,309 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:41,309 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:44,306 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:47,332 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:50,308 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:53,313 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:56,315 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:30:59,313 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:02,316 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:05,310 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:08,316 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:11,320 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:14,335 [17] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:17,337 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:20,339 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:23,340 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:26,341 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:29,342 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:32,344 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:35,352 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:38,346 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:41,347 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:44,348 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:47,346 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:50,348 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:53,345 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:56,346 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:31:59,351 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:02,350 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:05,354 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:08,356 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:11,358 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:14,360 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:17,361 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:20,369 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:23,364 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:26,363 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:29,366 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:32,446 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:35,364 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:38,364 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:41,370 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:44,367 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:47,368 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:50,375 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:53,370 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:56,372 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:32:59,375 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:02,376 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:05,377 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:08,374 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:11,376 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:14,378 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:17,377 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:20,378 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:23,379 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:26,378 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:29,382 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:32,383 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:35,387 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:38,388 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:41,384 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:44,389 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:47,389 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:50,389 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:53,392 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:56,396 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:33:59,404 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:02,399 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:05,401 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:08,400 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:11,399 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:14,421 [17] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:17,415 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:20,419 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:23,418 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:26,416 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:29,418 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:32,418 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:35,420 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:38,425 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:41,426 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:44,426 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:47,429 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:50,431 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:53,428 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:56,430 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:34:59,431 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:02,435 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:05,432 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:08,437 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:11,437 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:14,438 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:17,453 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:20,439 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:23,436 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:26,442 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:29,465 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:32,446 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:35,446 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:38,447 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:41,500 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:44,449 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:47,448 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:35:50,461 [6] INFO  ICanExternalTransferMoney.Program [(null)] - New IAccountRepository address: net.tcp://localhost:41266/IAccount
+2014-06-05 17:36:32,468 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:35,470 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:38,471 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:41,471 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:44,474 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:47,475 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:50,476 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:53,482 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:56,478 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:36:59,478 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:02,478 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:05,481 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:08,483 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:11,483 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:14,494 [17] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:17,492 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:20,496 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:23,499 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:26,500 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:29,501 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:32,502 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:35,502 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:38,505 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:41,505 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:44,503 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:47,507 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:50,510 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:53,509 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:56,509 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:37:59,511 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:02,514 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:05,515 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:08,511 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:11,512 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:14,523 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:17,528 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:20,583 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:23,660 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:26,674 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:29,762 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:32,817 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:35,841 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:38,883 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:41,918 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:44,934 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:47,988 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:51,069 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:54,140 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:38:57,188 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 17:39:00,241 [6] INFO  ICanExternalTransferMoney.Program [(null)] - New IAccountRepository address: net.tcp://localhost:41266/IAccount
+2014-06-05 18:13:03,535 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 18:13:06,536 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 18:13:09,537 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 18:13:12,537 [6] INFO  ICanExternalTransferMoney.Program [(null)] - AccountRepo not registered on ServiceRepo
+2014-06-05 18:13:15,555 [6] INFO  ICanExternalTransferMoney.Program [(null)] - New IAccountRepository address: net.tcp://localhost:41266/IAccount
+2014-06-05 18:31:46,444 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Timer stopped
+2014-06-05 18:31:46,451 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Unregistered in IServiceRepository
+2014-06-05 18:31:46,486 [10] INFO  ICanExternalTransferMoney.Program [(null)] - Service Endpoint Closed.
