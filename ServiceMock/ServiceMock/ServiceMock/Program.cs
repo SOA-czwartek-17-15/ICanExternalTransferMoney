@@ -31,18 +31,32 @@ namespace ServiceMock
 
             string tekst = Console.ReadLine();
 
-            while (tekst.Equals("n"))
+            while (tekst.Equals("n") || tekst.Equals("a"))
             {
-                Contracts.ICanExternalTransferMoney transfer;
-                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-                ChannelFactory<Contracts.ICanExternalTransferMoney> cf = new ChannelFactory<Contracts.ICanExternalTransferMoney>(binding, new EndpointAddress("net.tcp://192.168.0.99:50008/ICanExternalTransferMoney"));
-                transfer = cf.CreateChannel();
+                if(tekst.Equals("n"))
+                {
+                    Contracts.ICanExternalTransferMoney transfer;
+                    NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                    ChannelFactory<Contracts.ICanExternalTransferMoney> cf = new ChannelFactory<Contracts.ICanExternalTransferMoney>(binding, new EndpointAddress("net.tcp://localhost:50008/ICanExternalTransferMoney"));
+                    transfer = cf.CreateChannel();
 
-                Guid wysylka = transfer.SendExternalMoney(Guid.NewGuid(), "abc", 12.5);
-                Guid odbior = transfer.ReceiveExternalMoney("bcd", Guid.NewGuid() , 32.4);
+                    Guid wysylka = transfer.SendExternalMoney(Guid.NewGuid(), "abc", 12.5);
+                    Guid odbior = transfer.ReceiveExternalMoney("bcd", Guid.NewGuid() , 32.4);
 
-                Console.WriteLine(wysylka);
-                Console.WriteLine(odbior);
+                    Console.WriteLine(wysylka);
+                    Console.WriteLine(odbior);
+                }
+                else if(tekst.Equals("a"))
+                {
+                    ContractsAsync.ICanExternalTransferMoneyAsync transferAsync;
+                    NetTcpBinding bindingAsync = new NetTcpBinding(SecurityMode.None);
+                    ChannelFactory<ContractsAsync.ICanExternalTransferMoneyAsync> cfAsync = new ChannelFactory<ContractsAsync.ICanExternalTransferMoneyAsync>(bindingAsync, new EndpointAddress("net.tcp://localhost:50008/ICanExternalTransferMoneyAsync"));
+                    transferAsync = cfAsync.CreateChannel();
+
+                    transferAsync.ReceiveExternalMoney("Kowalski", Guid.Empty, 20, Guid.NewGuid(), "MOCK");
+                    transferAsync.SendExternalMoney(Guid.Empty, "Nowak", 30, Guid.NewGuid(), "MOCK");
+                    transferAsync.CheckOperationStatus(Guid.NewGuid(), "MOCK");
+                }
 
                 tekst = Console.ReadLine();
             }
