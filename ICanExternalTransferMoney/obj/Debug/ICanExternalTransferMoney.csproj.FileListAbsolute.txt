@@ -18,4 +18,6 @@ C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMo
 C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.exe
 C:\Users\jelcz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\obj\Debug\ICanExternalTransferMoney.pdb
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\log4.config
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Mateusz\Documents\GitHub\ICanExternalTransferMoney\ICanExternalTransferMoney\bin\Debug\libzmq.dll

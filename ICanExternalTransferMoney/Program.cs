@@ -16,25 +16,26 @@ namespace ICanExternalTransferMoney
 {
     class Program
     {
-        private IServiceRepository serviceRepo;
+        //private IServiceRepository serviceRepo;
         private CanExternalTransferMoney transfer;
-        private CanExternalTransferMoneyAsync transferAsync;
         private string accountRepositoryAddress = null;
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-        private ChannelFactory<IServiceRepository> servCF;
+        //private ChannelFactory<IServiceRepository> servCF;
+        private ServiceRepoZeroMQClient serviceZMQClient;
         private string serviceAdress = ConfigurationManager.AppSettings["serviceAddress"];
 
         private bool registerdOnServiceRepo = false;
 
         static void Main(string[] args)
         {
-            try { new Program(); }
-            catch (Exception ex)
-            {
-                log.Error(ex.Message);
-                Console.WriteLine(ex.Message);
-                Console.ReadLine();
-            }
+            //try { 
+                new Program(); //}
+            //catch (Exception ex)
+            //{
+            //    log.Error(ex.Message);
+            //    Console.WriteLine(ex.Message);
+            //    Console.ReadLine();
+            //}
         }
 
         public Program()
@@ -47,46 +48,27 @@ namespace ICanExternalTransferMoney
             log.Info("DAO is created and avaible");
             //---------log----------
 
-            //Utworzenie Serwisu ICanExternalTransferMoney
             transfer = new CanExternalTransferMoney(dao);
-            var sh = new ServiceHost(transfer, new Uri[] { new Uri("net.tcp://0.0.0.0:50008/ICanExternalTransferMoney") });
-            NetTcpBinding bindingOUT = new NetTcpBinding(SecurityMode.None);
-            sh.AddServiceEndpoint(typeof(Contracts.ICanExternalTransferMoney), bindingOUT, serviceAdress);
-            sh.Open();
-
             //---------log----------
             Console.WriteLine("Service has been made");
             log.Info("Service has been made");
             //---------log----------
 
             //Uruchomienie wątku ZeroMQ
-            ZeroMQServer zeroMQServer = new ZeroMQServer();
+            ZeroMQServer zeroMQServer = new ZeroMQServer("tcp://127.0.0.1:5577", transfer);
             System.Threading.Thread zeroMQServerThread = new System.Threading.Thread(new System.Threading.ThreadStart(zeroMQServer.Receive));
             zeroMQServerThread.Start();
 
-            //Utworzenie Serwisu ICanExternalTransferMoney
-            transferAsync = new CanExternalTransferMoneyAsync();
-            var shAsync = new ServiceHost(transferAsync, new Uri[] { new Uri("net.tcp://0.0.0.0:50008/ICanExternalTransferMoneyAsync") });
-            NetTcpBinding bindingOUTAsync = new NetTcpBinding(SecurityMode.None);
-            shAsync.AddServiceEndpoint(typeof(ContractsAsync.ICanExternalTransferMoneyAsync), bindingOUTAsync, serviceAdress + "Async");
-            shAsync.Open();
-
-            //---------log----------
-            Console.WriteLine("Service Async has been made");
-            log.Info("Service Async has been made");
-            //---------log----------
-
             //Wyciąganie adresu ServiceRepository z App.config i uzyskanie ServiceRepo
             string serviceRepositoryAddress = ConfigurationManager.AppSettings["serviceRepositoryAddress"];
-            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-            servCF = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(serviceRepositoryAddress));
+            serviceZMQClient = new ServiceRepoZeroMQClient(serviceRepositoryAddress);
 
             //timer
             Timer timer = new Timer();
             timer.Interval = Double.Parse(ConfigurationManager.AppSettings["aliveSignalDelay"]);
             timer.Elapsed += new ElapsedEventHandler(TimerOnTick);
             timer.Start();
-            TimerOnTick(null, null);
+            //TimerOnTick(null, null);
 
             //---------log----------
             Console.WriteLine("Timer started");
@@ -100,34 +82,29 @@ namespace ICanExternalTransferMoney
             Console.ReadLine();
 
             timer.Stop();
-
             //---------log----------
             Console.WriteLine("Timer stopped");
             log.Info("Timer stopped");
             //---------log----------
 
-            try
+            if (registerdOnServiceRepo)
             {
-                if (registerdOnServiceRepo)
+                if (serviceZMQClient.Unregister())
                 {
-                    serviceRepo = servCF.CreateChannel();
-                    serviceRepo.Unregister("ICanExternalTransferMoney");
-
                     //---------log----------
                     Console.WriteLine("Unregistered in IServiceRepository");
                     log.Info("Unregistered in IServiceRepository");
                     //---------log----------
                 }
-            }
-            catch (EndpointNotFoundException ex)
-            {
-                //---------log----------
-                Console.WriteLine("Unregister failed, because Service is dead.");
-                log.Info("Unregister failed, because Service is dead.");
-                //---------log----------
+                else
+                {
+                    //---------log----------
+                    Console.WriteLine("Unregister failed, because Service is dead.");
+                    log.Info("Unregister failed, because Service is dead.");
+                    //---------log----------
+                }
             }
 
-            sh.Close();
             //---------log----------
             Console.WriteLine("Service Endpoint Closed.");
             log.Info("Service Endpoint Closed.");
@@ -147,34 +124,30 @@ namespace ICanExternalTransferMoney
                 //Rejestracja Serwisu w ServiceRepository i odpalenie timera
                 if (!registerdOnServiceRepo)
                 {
-                    serviceRepo = servCF.CreateChannel();
-                    serviceRepo.RegisterService("ICanExternalTransferMoney", serviceAdress);
-                    registerdOnServiceRepo = true;
+                    if (serviceZMQClient.Register(serviceAdress))
+                    {
+                        registerdOnServiceRepo = true;
 
-                    //---------log----------
-                    Console.WriteLine("Service has been registered");
-                    log.Info("Service has been registered");
-                    //---------log----------
+                        //---------log----------
+                        Console.WriteLine("Service has been registered");
+                        log.Info("Service has been registered");
+                        //---------log----------
+                    }
+                    else throw new EndpointNotFoundException();
                 }
 
                 try
                 {
-                    serviceRepo = servCF.CreateChannel();
-                    serviceRepo.Alive("ICanExternalTransferMoney");
-                    Console.Write(".");
+                    if (serviceZMQClient.Alive()) Console.Write(".");
+                    else throw new EndpointNotFoundException();
 
-                    serviceRepo = servCF.CreateChannel();
-                    string address = serviceRepo.GetServiceLocation("IAccountService");
+                    string address = serviceZMQClient.GetServiceLocation("IAccountService");
                     if (address == null || !address.Equals(accountRepositoryAddress))
                     {
                         if (address != null)
                         {
                             accountRepositoryAddress = address;
-                            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-                            ChannelFactory<IAccountRepository> cf = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(accountRepositoryAddress));
-                            IAccountRepository accountRepository = cf.CreateChannel();
-                            transfer.AccountRepoChannelFactory = cf;
-                            transfer.AccountRepository = accountRepository;
+                            transfer.AccountZMQClient = new AccountRepoZeroMQClient(accountRepositoryAddress);
 
                             //---------log----------
                             log.InfoFormat("New IAccountRepository address: {0}", address);
@@ -183,7 +156,7 @@ namespace ICanExternalTransferMoney
                         }
                         else
                         {
-                            transfer.AccountRepository = null;
+                            transfer.AccountZMQClient = null;
                             accountRepositoryAddress = null;
 
                             //---------log----------

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Contracts;
 using NHibernate;
 using ICanExternalTransferMoney.Domain;
 using System.ServiceModel;
@@ -16,8 +15,9 @@ namespace ICanExternalTransferMoney
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class CanExternalTransferMoney : Contracts.ICanExternalTransferMoney
     {
-        public IAccountRepository AccountRepository { set; get; }
-        public ChannelFactory<IAccountRepository> AccountRepoChannelFactory { set; get; }
+        //public IAccountRepository AccountRepository { set; get; }
+        //public ChannelFactory<IAccountRepository> AccountRepoChannelFactory { set; get; }
+        public AccountRepoZeroMQClient AccountZMQClient { get; set; }
         private static readonly ILog log = LogManager.GetLogger(typeof(CanExternalTransferMoney));
         public DAO DataAccessObject{ set; get;}
 
@@ -34,7 +34,7 @@ namespace ICanExternalTransferMoney
         {
             try
             {
-                if (AccountRepository == null)
+                if (AccountZMQClient == null)
                 {
                     //---------log----------
                     log.ErrorFormat("AccountRepo is null - NIE Otrzymano: {0} od: {1} do: {2}", howMany, from, to);
@@ -42,8 +42,7 @@ namespace ICanExternalTransferMoney
                     //---------log----------
                     return Guid.Empty;
                 }
-                AccountRepository = AccountRepoChannelFactory.CreateChannel();
-                Account toAccount = AccountRepository.GetAccountById(to);
+                Account toAccount = AccountZMQClient.GetAccountById(to);
                 if (toAccount == null)
                 {
                     //---------log----------
@@ -53,8 +52,8 @@ namespace ICanExternalTransferMoney
                     return Guid.Empty;
                 }
                 string nrKonta = toAccount.AccountNumber;
-                AccountRepository = AccountRepoChannelFactory.CreateChannel();
-                if (AccountRepository.ChangeAccountBalance(to, toAccount.Money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
+
+                if (AccountZMQClient.ChangeAccountBalance(to, toAccount.Money + (long)howMany))//nie wiem czemu long jest w interfejsie o.O
                 {
                     //---------log----------
                     Console.WriteLine("\nOtrzymano: {0} od: {1} do: {2}({3})", howMany, from, nrKonta, to);
@@ -91,7 +90,7 @@ namespace ICanExternalTransferMoney
         {
             try
             {
-                if (AccountRepository == null)
+                if (AccountZMQClient == null)
                 {
                     //---------log----------
                     log.ErrorFormat("AccountRepo is null - NIE Wysłano: {0} do: {1} od: {2}", howMany, to, from);
@@ -99,8 +98,7 @@ namespace ICanExternalTransferMoney
                     //---------log----------
                     return Guid.Empty;
                 }
-                AccountRepository = AccountRepoChannelFactory.CreateChannel();
-                Account fromAccount = AccountRepository.GetAccountById(from);
+                Account fromAccount = AccountZMQClient.GetAccountById(from);
                 if (fromAccount == null)
                 {
                     //---------log----------
@@ -110,9 +108,8 @@ namespace ICanExternalTransferMoney
                     return Guid.Empty;
                 }
                 string nrKonta = fromAccount.AccountNumber;
-                Contracts.Account nowy = new Contracts.Account();
-                AccountRepository = AccountRepoChannelFactory.CreateChannel();
-                if (AccountRepository.ChangeAccountBalance(from, fromAccount.Money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
+
+                if (AccountZMQClient.ChangeAccountBalance(from, fromAccount.Money + (long)howMany)) //nie wiem czemu long jest w interfejsie o.O
                 {
                     //---------log----------
                     log.InfoFormat("Wysłano: {0} do: {1} od: {2}({3})", howMany, to, nrKonta, from);
